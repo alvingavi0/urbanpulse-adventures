@@ -1,0 +1,14 @@
+# Video files exceeding Vercel's 100MB file size limit
+*.mp4
+*.avi
+*.mov
+*.mkv
+
+# Git files
+.git
+.gitignore
+
+# Local development
+node_modules
+.env.local
+.vercel
