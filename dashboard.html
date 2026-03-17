@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dashboard — UrbanPulse Adventures</title>
+  <link rel="stylesheet" href="./styles/static.css">
+  <style>
+    .dashboard{ padding:2rem; max-width:1100px; margin:0 auto }
+    .grid-2{ display:grid; grid-template-columns:1fr 320px; gap:1rem }
+    .panel{ background: rgba(255,255,255,0.02); padding:1rem; border-radius:10px }
+    .small{ font-size:.9rem }
+    .btn-logout{ background:#b04f2b;color:#fff;border:none;padding:.5rem 1rem;border-radius:6px }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="brand"><a href="./index.html">Urban Pulse</a></h1>
+      <div class="nav-utilities">
+        <button class="utility-btn login-btn" title="Account">Account</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="dashboard">
+    <h2>Your Dashboard</h2>
+    <div class="grid-2">
+      <div>
+        <div class="panel" id="panel-cart">
+          <h3>Cart Overview</h3>
+          <div id="cart-list" class="small">(loading...)</div>
+        </div>
+
+        <div class="panel" id="panel-orders" style="margin-top:1rem">
+          <h3>Order History</h3>
+          <div id="order-list" class="small">No orders yet.</div>
+        </div>
+
+        <div class="panel" id="panel-feedback" style="margin-top:1rem">
+          <h3>Submit Feedback (posts to site testimonials)</h3>
+          <form id="feedbackForm">
+            <input name="title" placeholder="Title" required style="width:100%;margin-bottom:.5rem;padding:.5rem" />
+            <textarea name="message" placeholder="Share your experience" required style="width:100%;height:120px;padding:.5rem"></textarea>
+            <div style="display:flex;gap:.5rem;justify-content:flex-end;margin-top:.5rem"><button class="btn btn-primary" type="submit">Submit</button></div>
+          </form>
+        </div>
+      </div>
+
+      <aside>
+        <div class="panel" id="panel-wishlist">
+          <h3>Wishlist</h3>
+          <div id="wish-list" class="small">(empty)</div>
+        </div>
+
+        <div class="panel" id="panel-account" style="margin-top:1rem">
+          <h3>Account Settings</h3>
+          <div id="account-info" class="small">(loading)</div>
+          <div style="margin-top:.75rem"><button id="btn-logout" class="btn-logout">Log out</button></div>
+        </div>
+
+      </aside>
+    </div>
+  </main>
+
+  <script src="./scripts/geo.js"></script>
+  <script src="./scripts/theme.js"></script>
+  <script src="./scripts/currency.js"></script>
+  <script src="./scripts/language.js"></script>
+  <script src="./scripts/auth.js"></script>
+  <script src="./scripts/global.js"></script>
+  <script src="./scripts/ux.js"></script>
+  <script>
+    // Dashboard logic: read from localStorage keys set by ux.js authManager and cart/wishlist
+    (function(){
+      function qs(sel){ return document.querySelector(sel); }
+      const session = (window.authManager && window.authManager.current && window.authManager.current()) || JSON.parse(localStorage.getItem('upa_session') || 'null');
+      if(!session){ window.location.href = './index.html'; return; }
+      qs('#account-info').textContent = session.name + ' (' + session.email + ')';
+
+      // cart
+      const cart = JSON.parse(localStorage.getItem('upa_cart') || '[]');
+      qs('#cart-list').innerHTML = cart.length ? '<ul>' + cart.map(i=>'<li>'+i+'</li>').join('') + '</ul>' : '(empty)';
+
+      // wishlist
+      const wish = JSON.parse(localStorage.getItem('upa_wishlist') || '[]');
+      qs('#wish-list').innerHTML = wish.length ? '<ul>' + wish.map(i=>'<li>'+i+'</li>').join('') + '</ul>' : '(empty)';
+
+      // orders
+      const orders = JSON.parse(localStorage.getItem('upa_orders') || '[]');
+      qs('#order-list').innerHTML = orders.length ? '<ul>' + orders.map(o=>'<li>'+o.id+': '+ (o.total||'') +'</li>').join('') + '</ul>' : 'No orders yet.';
+
+      // logout
+      qs('#btn-logout').addEventListener('click', function(){ if(window.authManager) { window.authManager.logout(); } localStorage.removeItem('upa_session'); window.location.href = './index.html'; });
+
+      // feedback posts to upa_testimonials in localStorage and will be rendered site-wide when index loads
+      qs('#feedbackForm').addEventListener('submit', function(e){ e.preventDefault(); const data = { id: Date.now(), title: this.title.value, message: this.message.value, author: session.name || session.email, date: new Date().toISOString() }; const t = JSON.parse(localStorage.getItem('upa_testimonials') || '[]'); t.unshift(data); localStorage.setItem('upa_testimonials', JSON.stringify(t)); alert('Thanks — your feedback has been posted to site testimonials.'); this.reset(); });
+    })();
+  </script>
+</body>
+</html>

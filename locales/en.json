@@ -1,0 +1,60 @@
+{
+  "hero": {
+    "title": "Explore Nairobi Like Never Before",
+    "subtitle": "Discover hidden gems, urban culture, and breathtaking adventures with our expert local guides.",
+    "cta": "See Tours"
+  },
+  "tours": {
+    "heading": "Our Tours & Packages",
+    "kibera": {
+      "title": "Kibera Street Vibes",
+      "desc": "Explore Nairobi's vibrant community and street culture.",
+      "book": "Book",
+      "learnMore": "Learn More"
+    },
+    "nightlife": {
+      "title": "Nairobi Nightlife",
+      "desc": "Discover Nairobi's after-dark culture — live music, food streets, and vibrant local scenes.",
+      "price": "$1,150",
+      "book": "Book",
+      "learnMore": "Learn More"
+    },
+    "lens": {
+      "title": "Lens & Legends",
+      "desc": "Capture Nairobi's urban beauty with local storytellers and guides.",
+      "book": "Book"
+    }
+  },
+  "booking": {
+    "heading": "Book Your Adventure",
+    "name": "Your Name",
+    "email": "Your Email",
+    "selectTour": "Select Tour",
+    "selectTime": "Select Time",
+    "selectDate": "Select Date",
+    "submit": "Submit Booking",
+    "tour1": "Kibera Street Vibes",
+    "tour2": "Nairobi Nightlife",
+    "tour3": "Lens & Legends"
+  },
+  "gallery": {
+    "heading": "Gallery"
+  },
+  "footer": {
+    "copyright": "© 2026 UrbanPulse Adventures. All rights reserved.",
+    "contact": "Email: info@urbanpulseadventures.com • Phone/WhatsApp: +254700000000"
+  },
+  "nav": {
+    "home": "Home",
+    "packages": "Packages",
+    "about": "About",
+    "book": "Book"
+  },
+  "language": {
+    "english": "English",
+    "swahili": "Swahili",
+    "spanish": "Español",
+    "french": "Français",
+    "roadman": "Roadman"
+  }
+}

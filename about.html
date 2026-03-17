@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#f8fafc">
+  <title>About Us — Urban Pulse Adventures</title>
+  <link rel="icon" href="./files/logo%201.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/static.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="brand"><a href="./index.html"><img src="./files/logo%201.png" alt="UrbanPulse logo" class="brand-logo"> <span class="brand-text"><span class="brand-main">Urban Pulse</span><span class="brand-sub">Adventures</span></span></a></h1>
+      <p class="brand-tagline" style="margin:0; font-size:0.9rem; color:var(--muted);">Uncover. Participate.</p>
+
+      <button class="nav-toggle" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="hamburger"></span>
+      </button>
+      <!-- Utility Controls -->
+      <div class="nav-utilities">
+        <button class="utility-btn login-btn" title="Login">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2M12 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+
+        <div class="utility-dropdown">
+          <button class="utility-btn currency-btn" id="currencyBtn" title="Select Currency">
+            $
+          </button>
+          <div class="dropdown-menu currency-menu">
+            <button class="dropdown-item">$ USD</button>
+            <button class="dropdown-item">€ EUR</button>
+            <button class="dropdown-item">£ GBP</button>
+            <button class="dropdown-item">¥ JPY</button>
+            <button class="dropdown-item">₹ INR</button>
+            <button class="dropdown-item">د.إ AED</button>
+            <button class="dropdown-item">R ZAR</button>
+            <button class="dropdown-item">KSH</button>
+          </div>
+        </div>
+      </div>
+      <button class="theme-toggle" aria-label="Toggle theme" title="Toggle theme" style="margin-left:.5rem">☼</button>
+
+      <div id="live-clock" class="live-clock" title="Current Time"></div>
+
+      <div class="timezone-indicator" style="font-size:0.75rem; color:var(--muted); margin-left:0.5rem; margin-top:0.25rem;">East Africa Time (EAT)</div>
+
+      <nav id="mainNav" class="main-nav" aria-hidden="true">
+        <a href="./index.html">Home</a>
+        <a href="./packages.html">Packages</a>
+        <a href="./about.html" aria-current="page">About</a>
+        <a href="#" data-action="open-booking">Book</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page about-page">
+    <section class="hero hero-sm" style="background-image:linear-gradient(rgba(0,0,0,0.28),rgba(0,0,0,0.22)), url('./files/image%2042.jpg'); background-size:cover; background-position:center; background-repeat:no-repeat;">
+      <div class="container hero-grid">
+        <div class="hero-col images">
+          <div class="hero-image" style="background-image:url('./files/image%2040.jpeg');" aria-hidden="true"></div>
+        </div>
+
+        <div class="hero-col images">
+          <div class="hero-image" style="background-image:url('./files/image%2043.jpeg');" aria-hidden="true"></div>
+        </div>
+
+        <div class="hero-col content">
+          <div class="hero-inner">
+            <h2 class="neon-text">About Us</h2>
+            <p class="card-desc">Urban Pulse Adventures | Connecting travelers to Kenya’s culture, art, and communities. Authentic journeys, meaningful experiences, and youth empowerment at every step.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container intro-cards">
+      <div class="grid">
+        <article class="card glow">
+          <div class="card-body">
+            <h3 class="neon-text">What We Do</h3>
+            <p class="card-desc">We guide small groups through lived-in neighborhoods, partnering with local makers, musicians and community leaders to ensure visits are respectful, sustainable and enriching. Tours are storytelling-first — designed to support local micro‑enterprises while giving visitors a layered, memorable perspective.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-body">
+              <h3 class="neon-text">Our Approach</h3>
+              <p class="card-desc">Built on complementary strengths—local storytelling, photography and media, guest logistics, safety oversight and creative programming—our approach pairs warm, human hospitality with professional service systems. We design experiences that feel handcrafted yet dependable: precise operations, immersive narratives, world‑class photo capture, and multilingual guest care so both local explorers and international visitors leave with vivid memories. Smart, unobtrusive digital tools (secure booking, curated pre-briefs and media delivery) amplify the live experience without replacing the human connection.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="container mvgs">
+      <div class="grid">
+        <article class="card">
+          <div class="card-body">
+            <h3 class="neon-text">Our Mission</h3>
+            <p class="card-desc">To connect travelers to authentic cultural experiences while equipping local youth with professional skills, certification, safety training, and digital tools to deliver structured, ethical, and world-class tourism services.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-body">
+            <h3 class="neon-text">Our Vision</h3>
+            <p class="card-desc">To become a leading youth-driven tourism platform in Kenya that transforms urban narratives, empowers communities, and sets the standard for ethical, immersive, and digitally connected travel experiences.</p>
+          </div>
+        </article>
+      </div>
+
+      <section class="container core-values" style="margin-top:1rem;">
+        <article class="card">
+          <div class="card-body">
+            <h3 class="neon-text">Core Values</h3>
+            <ul class="features">
+              <li>Community empowerment</li>
+              <li>Professionalism</li>
+              <li>Ethical storytelling</li>
+              <li>Cultural authenticity</li>
+              <li>Transparency</li>
+              <li>Sustainability</li>
+              <li>Youth leadership</li>
+              <li>Innovation</li>
+              <li>Accountability</li>
+              <li>Respect for community dignity</li>
+            </ul>
+          </div>
+        </article>
+      </section>
+
+      <div class="grid" style="margin-top:1rem">
+        <article class="card">
+          <div class="card-body">
+            <h3 class="neon-text">Goals</h3>
+            <ul class="features">
+              <li>Operate sustainably and ethically, prioritizing community benefit.</li>
+              <li>Scale opportunities for local creatives and micro‑enterprises.</li>
+              <li>Deliver unforgettable, story‑led experiences that educate and inspire.</li>
+              <li>Maintain high safety and service standards while innovating with subtle tech features.</li>
+              <li>Grow repeat engagement through the Nairobi Vibe Passport program.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-body">
+            <h3 class="neon-text">Biblical Motivation</h3>
+            <p class="card-desc">Our work is guided by values of service, stewardship and love for neighbor. Inspired by passages such as Micah 6:8 — "to act justly, to love mercy, and to walk humbly with your God" — we seek to serve communities with respect, share opportunities fairly, and steward the places and people who welcome us.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="container who-we-are">
+      <article class="card">
+        <div class="card-body">
+          <h3 class="neon-text">Who We Are</h3>
+          <p class="card-desc">We are a crew of young, motivated boys who grew up in Kibera — neighbours, friends and collaborators who turned a shared curiosity into a bold, creative enterprise. From humble streets and crowded alleys we learned the art of listening, improvising and telling stories. Each of us brings a different skill: a way with words, a love for photography, a knack for logistics, an eye for safety, and a hunger to craft experiences that surprise and delight.</p>
+          <p class="card-desc">Together we built Urban Pulse Adventures as a homegrown answer to tourism that too often overlooks human stories. We design tours that pamper curiosity: warm welcomes, handcrafted playlists, local flavors, and meaningful stops that leave money and pride in the hands of our hosts. We run things professionally — but we keep it soulful, honest and unapologetically local. This is our craft; this is our promise.</p>
+        </div>
+      </article>
+    </section>
+
+    <section class="container team-section">
+      <h3 class="neon-text">Our Team</h3>
+      <p class="lede">Meet the people shaping Urban Pulse Adventures.</p>
+      <div class="team-grid">
+        <div class="member card">
+          <img src="./files/image%2041.jpeg" alt="Calvin Wanyama" class="member-photo calvin-photo">
+          <h4 class="card-desc">Calvin Wanyama</h4>
+        </div>
+        <div class="member card"><div class="avatar">EJ</div><h4 class="card-desc">Ephraim Jeremiah</h4></div>
+        <div class="member card"><div class="avatar">JO</div><h4 class="card-desc">Joshua Omwenga</h4></div>
+        <div class="member card"><div class="avatar">T</div><h4 class="card-desc">Tophyl Ochieng</h4></div>
+        <div class="member card"><div class="avatar">A</div><h4 class="card-desc">Andy Ouma</h4></div>
+        <div class="member card"><div class="avatar">AM</div><h4 class="card-desc">Alfred Mboya</h4></div>
+        <div class="member card"><div class="avatar">JN</div><h4 class="card-desc">Joseph Nyakwana</h4></div>
+        <div class="member card"><div class="avatar">Y</div><h4 class="card-desc">Yvonne Khaemba</h4></div>
+      </div>
+    </section>
+
+    <section class="container about-cta">
+      <p>Want to work with us or learn more? <a href="mailto:hello@urbanpulse.example">Contact our team</a>.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© 2026 UrbanPulse Adventures. All rights reserved. <a href="terms.html" style="color:inherit; text-decoration:underline; margin-left:.5rem;">Terms and Conditions</a></div>
+
+    <style>
+    .team-section { padding: 2rem 1rem; text-align: center; }
+    .team-grid { display:grid; grid-template-columns: repeat(auto-fit,minmax(140px,1fr)); gap:1rem; margin-top:1rem; }
+    .member { background: rgba(255,255,255,0.03); padding:1rem;border-radius:10px; display:flex; flex-direction:column; align-items:center; gap:.5rem; text-align:center; }
+    .member h4{ margin:0; font-size:1rem; }
+    .avatar{ width:96px; height:96px; border-radius:50%; display:inline-grid; place-items:center; background:var(--accent); color:var(--bg); font-weight:700; margin:0 auto; font-size:1.25rem; box-shadow:0 10px 28px rgba(0,0,0,0.12); border:3px solid rgba(255,255,255,0.04); }
+    /* Use more specific selectors to override .card img global rules */
+    .member.card .member-photo{ width:96px; height:96px; border-radius:50%; object-fit:cover; display:block; margin:0 auto; box-shadow:0 10px 28px rgba(0,0,0,0.12); border:3px solid rgba(255,255,255,0.04)}
+    /* Calvin uses the larger circular hero dimensions (more specific to override .card img) */
+    .member.card .calvin-photo{ width:128px; height:128px; border-radius:50%; object-fit:cover; box-shadow:0 14px 36px rgba(0,0,0,0.14); border:3px solid rgba(255,255,255,0.06)}
+    .hero-sm .hero-inner h2, .hero-sm .hero-inner p{color:#fff}
+    /* New hero grid: two visible images + content column */
+    .hero-grid{display:grid; grid-template-columns:1fr 1fr 1fr; gap:1rem; align-items:center}
+    .hero-col.images{display:flex; align-items:center; justify-content:center}
+    .hero-image{width:220px; height:220px; border-radius:50%; background-size:cover; background-position:center; background-repeat:no-repeat; box-shadow:0 18px 44px rgba(0,0,0,0.18); border:4px solid rgba(255,255,255,0.06)}
+    .hero-col.content .hero-inner{text-align:left}
+    /* disable kenburns overlay for this about hero so background remains static */
+    .hero.hero-sm::before{display:none !important}
+    @media (max-width:900px){ .hero-grid{grid-template-columns:1fr; gap:1rem} .hero-image{height:160px; width:160px} .member.card .member-photo, .avatar{width:72px; height:72px} .member.card .calvin-photo{width:112px; height:112px} .hero-col.content .hero-inner{text-align:center} }
+    </style>
+  <script src="./scripts/geo.js"></script>
+  <script src="./scripts/theme.js"></script>
+  <script src="./scripts/currency.js"></script>
+  <script src="./scripts/language.js"></script>
+  <script src="./scripts/auth.js"></script>
+  <script src="./scripts/global.js"></script>
+  <script src="./scripts/ux.js"></script>
+  <script src="./scripts/static.js"></script>
+
+</body>
+</html>

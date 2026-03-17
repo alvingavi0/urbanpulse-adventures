@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#f8fafc">
+  <title>Terms and Conditions — Urban Pulse Adventures</title>
+  <link rel="icon" href="./files/logo%201.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/static.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="brand"><a href="./index.html"><img src="./files/logo%201.png" alt="UrbanPulse logo" class="brand-logo"> <span class="brand-text"><span class="brand-main">Urban Pulse</span><span class="brand-sub">Adventures</span></span></a></h1>
+      <button class="nav-toggle" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation"><span class="hamburger"></span></button>
+      <div class="nav-utilities">
+        <button class="utility-btn login-btn" title="Login"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2M12 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <div class="utility-dropdown">
+          <button class="utility-btn currency-btn" id="currencyBtn" title="Select Currency">$</button>
+          <div class="dropdown-menu currency-menu"><button class="dropdown-item">$ USD</button><button class="dropdown-item">€ EUR</button><button class="dropdown-item">£ GBP</button><button class="dropdown-item">¥ JPY</button><button class="dropdown-item">₹ INR</button><button class="dropdown-item">د.إ AED</button><button class="dropdown-item">R ZAR</button><button class="dropdown-item">KSH</button></div>
+        </div>
+      </div>
+      <button class="theme-toggle" aria-label="Toggle theme" title="Toggle theme" style="margin-left:.5rem">☼</button>
+      <div id="live-clock" class="live-clock" title="Current Time"></div>
+      <div class="timezone-indicator" style="font-size:0.75rem; color:var(--muted); margin-left:0.5rem; margin-top:0.25rem;">East Africa Time (EAT)</div>
+      <nav id="mainNav" class="main-nav" aria-hidden="true"><a href="./index.html" data-key="nav.home">Home</a><a href="./packages.html" data-key="nav.packages">Packages</a><a href="./about.html" data-key="nav.about">About</a><a href="./terms.html" aria-current="page">Terms</a></nav>
+    </div>
+  </header>
+
+  <style>
+    body, .terms-card { font-family: 'Inter', sans-serif; }
+    .terms-card h2 { font-family: 'Playfair Display', serif; color: #8b5e34; letter-spacing:0.4px; }
+    .terms-card p { margin-bottom:0.85rem; }
+    .terms-card ul { list-style:none; padding-left:0; margin-top:0.25rem; margin-bottom:0.9rem; }
+    .terms-card ul li {
+      position:relative;
+      padding-left:1.4rem;
+      margin-bottom:0.55rem;
+      line-height:1.55;
+      color:#3a2b20;
+    }
+    .terms-card ul li::before {
+      content:'•';
+      position:absolute;
+      left:0;
+      top:0;
+      color:#c27b39;
+      font-size:1.25rem;
+      line-height:1;
+      transform:translateY(-2px);
+    }
+    .terms-card .section-heading { display:flex; align-items:center; gap:0.45rem; margin-top:1.2rem; margin-bottom:0.65rem; font-size:1.05rem; letter-spacing:0.1em; text-transform:uppercase; color:#7b3f11; font-weight:700; }
+    .terms-card .section-heading span { background:rgba(194,123,57,0.16); border-radius:999px; padding:.2rem .6rem; font-size:0.78rem; color:#7b3f11; font-weight:800; }
+    .terms-content { border-left:3px solid rgba(194,123,57,0.2); padding-left:1rem; }
+  </style>
+  <main class="container" style="padding:2.2rem 1.2rem;">
+    <section class="terms-card" style="background:rgba(255,255,255,0.95); border:1px solid rgba(139,94,52,0.14); border-radius:14px; box-shadow:0 16px 38px rgba(43,31,23,0.11); max-width:900px; margin:0 auto; padding:1.5rem;">
+      <h2 style="font-size:1.95rem; margin-bottom:1rem;">Terms and Conditions</h2>
+      <div class="terms-content" style="max-height:calc(100vh - 220px); overflow:auto; padding-right:0.6rem; line-height:1.65; color:#2a1f18;">
+        <p><strong>1️⃣ Introduction</strong></p>
+        <p>Welcome to Urban Pulse Adventures.</p>
+        <p>By booking or participating in any experience offered by Urban Pulse Adventures, you agree to comply with and be bound by the following Terms & Conditions.</p>
+        <p>Urban Pulse Adventures is a Kenya-based, youth-led tourism platform that connects travelers with trained local guides to deliver authentic, culturally immersive, and community-centered experiences.</p>
+
+        <p class="section-heading"><span>2️⃣</span> Our Services</p>
+        <p>Urban Pulse Adventures provides:</p>
+        <ul>
+          <li>Guided cultural and community-based tours</li>
+          <li>Curated travel experiences</li>
+          <li>Local guide connection and booking services</li>
+          <li>Customized and structured tour packages</li>
+        </ul>
+        <p>All experiences are delivered by trained and certified local guides under the Urban Pulse system.</p>
+
+        <p><strong>3️⃣ Booking & Confirmation</strong></p>
+        <ul>
+          <li>All bookings must be made through official Urban Pulse channels (website, platform, or authorized representatives).</li>
+          <li>A booking is only confirmed once payment (full or deposit) has been received and acknowledged.</li>
+          <li>Clients will receive confirmation details including itinerary, meeting point, and guide information.</li>
+          <li>Urban Pulse reserves the right to decline or cancel bookings where necessary.</li>
+        </ul>
+
+        <p><strong>4️⃣ Pricing & Payments</strong></p>
+        <ul>
+          <li>All prices are listed in the applicable currency and may vary depending on package type and customization.</li>
+          <li>Payments must be made through approved payment methods provided by Urban Pulse.</li>
+          <li>Prices may include or exclude specific items (transport, meals, entry fees) as clearly stated in the package details.</li>
+          <li>Urban Pulse maintains a transparent pricing structure with no hidden charges.</li>
+        </ul>
+
+        <p><strong>5️⃣ Cancellation & Refund Policy</strong></p>
+        <p><strong>Cancellation by Client:</strong></p>
+        <ul>
+          <li>Cancellations made within a specified time frame may qualify for a partial or full refund.</li>
+          <li>Late cancellations or no-shows may not be eligible for refunds.</li>
+        </ul>
+        <p><strong>Cancellation by Urban Pulse:</strong></p>
+        <p>Urban Pulse reserves the right to cancel or reschedule tours due to:</p>
+        <ul>
+          <li>Safety concerns</li>
+          <li>Weather conditions</li>
+          <li>Operational challenges</li>
+          <li>Unforeseen circumstances</li>
+        </ul>
+        <p>In such cases, clients will be offered:</p>
+        <ul>
+          <li>Rescheduling options, or</li>
+          <li>A fair refund based on circumstances</li>
+        </ul>
+
+        <p><strong>6️⃣ Changes to Bookings</strong></p>
+        <p>Clients may request modifications to their booking (date, time, or experience type), subject to availability.</p>
+        <p>Urban Pulse will make reasonable efforts to accommodate changes but cannot guarantee availability.</p>
+
+        <p><strong>7️⃣ Traveler Responsibilities</strong></p>
+        <p>To ensure a safe and enjoyable experience, all travelers are expected to:</p>
+        <ul>
+          <li>Follow instructions provided by guides</li>
+          <li>Arrive on time at designated meeting points</li>
+          <li>Dress appropriately for the environment and activity</li>
+          <li>Respect local customs, culture, and community norms</li>
+          <li>Act responsibly and respectfully at all times</li>
+        </ul>
+        <p>Failure to comply may result in removal from the experience without refund.</p>
+
+        <p><strong>8️⃣ Code of Conduct (Community Respect)</strong></p>
+        <p>Urban Pulse operates within real communities.</p>
+        <p>Travelers must:</p>
+        <ul>
+          <li>Seek permission before taking photos or videos of individuals</li>
+          <li>Avoid intrusive or disrespectful behavior</li>
+          <li>Refrain from exploiting or misrepresenting community realities</li>
+          <li>Respect personal and community boundaries</li>
+        </ul>
+        <p>We promote ethical and responsible tourism at all times.</p>
+
+        <p><strong>9️⃣ Health & Safety</strong></p>
+        <p>Urban Pulse prioritizes safety but operates in dynamic urban environments.</p>
+        <p>Travelers acknowledge that:</p>
+        <ul>
+          <li>Participation is voluntary</li>
+          <li>Certain activities may involve normal urban risks</li>
+          <li>They are responsible for their personal health and well-being</li>
+        </ul>
+        <p>Clients are advised to:</p>
+        <ul>
+          <li>Inform guides of any medical conditions in advance</li>
+          <li>Carry personal essentials (water, medication, etc.)</li>
+        </ul>
+
+        <p><strong>🔟 Liability Disclaimer</strong></p>
+        <p>Urban Pulse Adventures acts as a facilitator connecting travelers with trained local guides.</p>
+        <p>While we ensure professionalism and safety standards:</p>
+        <ul>
+          <li>Urban Pulse is not liable for injuries, losses, or damages arising from unforeseen circumstances beyond reasonable control</li>
+          <li>Clients participate in activities at their own risk</li>
+          <li>Liability is limited to the extent permitted by applicable law</li>
+        </ul>
+
+        <p><strong>1️⃣1️⃣ Force Majeure</strong></p>
+        <p>Urban Pulse is not responsible for delays, cancellations, or disruptions caused by events beyond our control, including but not limited to:</p>
+        <ul>
+          <li>Weather conditions</li>
+          <li>Government actions</li>
+          <li>Public health emergencies</li>
+          <li>Political unrest</li>
+          <li>Natural disasters</li>
+        </ul>
+
+        <p><strong>1️⃣2️⃣ Photography & Media</strong></p>
+        <p>Urban Pulse may take photos or videos during tours for promotional purposes.</p>
+        <p>Clients may be included unless they request otherwise in advance.</p>
+        <p>Travelers are expected to respect the privacy and consent of community members when capturing content.</p>
+
+        <p><strong>1️⃣3️⃣ Privacy & Data Protection</strong></p>
+        <p>Urban Pulse respects your privacy.</p>
+        <p>Personal information collected during booking is used solely for service delivery and communication.</p>
+        <p>We comply with applicable data protection regulations.</p>
+        <p>We do not share personal data with unauthorized third parties.</p>
+
+        <p><strong>1️⃣4️⃣ Guide & Experience Standards</strong></p>
+        <p>All Urban Pulse guides are:</p>
+        <ul>
+          <li>Trained and certified</li>
+          <li>Knowledgeable about the community and culture</li>
+          <li>Committed to professional and ethical service delivery</li>
+        </ul>
+        <p>Urban Pulse ensures quality control across all experiences.</p>
+
+        <p><strong>1️⃣5️⃣ Complaints & Feedback</strong></p>
+        <p>We value your experience.</p>
+        <p>Any concerns or complaints should be reported promptly.</p>
+        <p>Urban Pulse will investigate and respond appropriately.</p>
+        <p>Feedback is used to improve service quality.</p>
+
+        <p><strong>1️⃣6️⃣ Governing Law</strong></p>
+        <p>These Terms & Conditions are governed by the laws of Kenya.</p>
+        <p>Any disputes arising will be subject to the jurisdiction of Kenyan courts.</p>
+
+        <p><strong>🔥 Final Note</strong></p>
+        <p>Urban Pulse Adventures is committed to delivering:</p>
+        <ul>
+          <li>Authentic experiences</li>
+          <li>Meaningful cultural connections</li>
+          <li>Safe and professional tourism services</li>
+        </ul>
+        <p>By booking with us, you become part of a responsible tourism movement that values both the traveler and the community.</p>
+        <p><strong>Uncover. Participate.</strong></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container">© 2026 UrbanPulse Adventures. All rights reserved.</div></footer>
+
+  <script src="./scripts/geo.js"></script>
+  <script src="./scripts/theme.js"></script>
+  <script src="./scripts/currency.js"></script>
+  <script src="./scripts/language.js"></script>
+  <script src="./scripts/auth.js"></script>
+  <script src="./scripts/global.js"></script>
+  <script src="./scripts/ux.js"></script>
+  <script src="./scripts/static.js"></script>
+</body>
+</html>

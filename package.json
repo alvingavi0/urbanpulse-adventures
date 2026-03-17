@@ -1,0 +1,10 @@
+{
+  "name": "urbanpulse-adventures",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "static": "npx http-server ./ -c-1",
+    "start": "npm run static"
+  }
+}

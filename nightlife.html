@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#f8fafc">
+  <title>Nairobi Nightlife — UrbanPulse</title>
+    <link rel="icon" href="./files/logo%201.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/static.css">
+</head>
+<body>
+  <div id="site-loader" class="loader">
+    <div class="loader-inner">
+      <img src="./files/logo%201.png" class="loader-logo" alt="logo">
+      <div class="loader-ring" aria-hidden="true">
+        <svg viewBox="0 0 100 100" role="img" aria-hidden="true">
+          <circle class="person" cx="50" cy="22" r="6" />
+          <circle class="person-sub" cx="76.63" cy="41.35" r="6" />
+          <circle class="person" cx="66.46" cy="72.65" r="6" />
+          <circle class="person-sub" cx="33.54" cy="72.65" r="6" />
+          <circle class="person" cx="23.37" cy="41.35" r="6" />
+          <circle cx="50" cy="50" r="3" fill="rgba(0,0,0,0.06)" />
+        </svg>
+      </div>
+      <div class="loader-text">Welcome to Urban Pulse Adventures</div>
+      <div class="loader-lines"><span></span><span></span><span></span></div>
+    </div>
+  </div>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="brand"><a href="./index.html"><img src="./files/logo%201.png" alt="UrbanPulse logo" class="brand-logo"> <span class="brand-text"><span class="brand-main">Urban Pulse</span><span class="brand-sub">Adventures</span></span></a></h1>
+      <p class="brand-tagline" style="margin:0; font-size:0.9rem; color:var(--muted);">Uncover. Participate.</p>
+
+      <button class="nav-toggle" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="hamburger"></span>
+      </button>
+
+      <!-- Utility Controls -->
+      <div class="nav-utilities">
+        <button class="utility-btn login-btn" title="Login">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2M12 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+
+        <div class="utility-dropdown">
+          <button class="utility-btn currency-btn" id="currencyBtn" title="Select Currency">
+            $
+          </button>
+          <div class="dropdown-menu currency-menu">
+            <button class="dropdown-item">$ USD</button>
+            <button class="dropdown-item">€ EUR</button>
+            <button class="dropdown-item">£ GBP</button>
+            <button class="dropdown-item">¥ JPY</button>
+            <button class="dropdown-item">₹ INR</button>
+            <button class="dropdown-item">د.إ AED</button>
+            <button class="dropdown-item">R ZAR</button>
+            <button class="dropdown-item">KSH</button>
+          </div>
+        </div>
+      </div>
+
+      <button class="theme-toggle" aria-label="Toggle theme" title="Toggle theme" style="margin-left:.5rem">☼</button>
+
+      <div id="live-clock" class="live-clock" title="Current Time"></div>
+
+      <div class="timezone-indicator" style="font-size:0.75rem; color:var(--muted); margin-left:0.5rem; margin-top:0.25rem;">East Africa Time (EAT)</div>
+
+      <nav id="mainNav" class="main-nav" aria-hidden="true">
+        <a href="./index.html">Home</a>
+        <a href="./packages.html">Packages</a>
+        <a href="./about.html">About</a>
+        <a href="#" data-action="open-booking">Book</a>
+        <a href="./map.html">Map</a>
+        <a href="./donate.html">Donate</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero hero-sm" style="min-height:80vh; background-image: linear-gradient(180deg, rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('./files/Nairobi Central by night.jfif'); background-size: cover; background-position: center; color: #ffffff;">
+      <div class="container">
+        <h2 style="color:#ffffff" data-i18n="hero-title">Nairobi Nightlife</h2>
+        <p class="muted" style="color:#ffffff" data-i18n="hero-desc">Discover Nairobi's vibrant after-dark culture — live music, food streets, and vibrant local scenes.</p>
+      </div>
+    </section>
+
+    <section id="activities" class="container activities">
+      <h3 data-i18n="activities-heading">Our Nightlife Activities</h3>
+      <div class="grid">
+        <article class="card">
+          <img src="./files/Clubb Hopping.jfif" alt="Club Hopping">
+          <div class="card-body">
+            <h4 data-i18n="activity-clubhopping"><svg class="small-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Club Hopping</h4>
+            <p class="card-desc" data-i18n="activity-clubhopping-desc">Dive into Nairobi's pulsating club scene with local guides leading the way.</p>
+            <button class="btn btn-add-to-cart" onclick="addToCart('Club Hopping')" title="Add to Cart"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="cart-icon"><circle cx="9" cy="21" r="1" stroke="currentColor" stroke-width="2"/><circle cx="20" cy="21" r="1" stroke="currentColor" stroke-width="2"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="./files/Documentary Filming.jfif" alt="Documentary Filming">
+          <div class="card-body">
+            <h4 data-i18n="activity-documentary"><svg class="small-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.5"/><path d="M12 1v6M12 17v6M4.22 4.22l4.24 4.24M15.54 15.54l4.24 4.24M1 12h6M17 12h6M4.22 19.78l4.24-4.24M15.54 8.46l4.24-4.24" stroke="currentColor" stroke-width="1.5"/></svg> Documentary Filming</h4>
+            <p class="card-desc" data-i18n="activity-documentary-desc">Capture authentic stories and moments with professional filming sessions.</p>
+            <button class="btn btn-add-to-cart" onclick="addToCart('Documentary Filming')" title="Add to Cart"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="cart-icon"><circle cx="9" cy="21" r="1" stroke="currentColor" stroke-width="2"/><circle cx="20" cy="21" r="1" stroke="currentColor" stroke-width="2"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="./files/Acoustic Music and Karaoke.jfif" alt="Acoustic Music and Karaoke">
+          <div class="card-body">
+            <h4 data-i18n="activity-acoustic"><svg class="small-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Acoustic Music and Karaoke</h4>
+            <p class="card-desc" data-i18n="activity-acoustic-desc">Enjoy live acoustic performances and join in karaoke fun.</p>
+            <button class="btn btn-add-to-cart" onclick="addToCart('Acoustic Music and Karaoke')" title="Add to Cart"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="cart-icon"><circle cx="9" cy="21" r="1" stroke="currentColor" stroke-width="2"/><circle cx="20" cy="21" r="1" stroke="currentColor" stroke-width="2"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="./files/Nairobi Skyscrapers.jpg" alt="Nairobi Skyscrapers">
+          <div class="card-body">
+            <h4 data-i18n="activity-skyscrapers"><svg class="small-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M3 12h18M12 3v18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Nairobi Skyscrapers</h4>
+            <p class="card-desc" data-i18n="activity-skyscrapers-desc">Discover Nairobi's iconic skyscrapers and modern architecture lighting up the night sky.</p>
+            <button class="btn btn-add-to-cart" onclick="addToCart('Nairobi Skyscrapers')" title="Add to Cart"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="cart-icon"><circle cx="9" cy="21" r="1" stroke="currentColor" stroke-width="2"/><circle cx="20" cy="21" r="1" stroke="currentColor" stroke-width="2"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="./files/Stargazing.jfif" alt="Stargazing">
+          <div class="card-body">
+            <h4 data-i18n="activity-stargazing"><svg class="small-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/><path d="M12 2v4M12 18v4M4 12h4M16 12h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg> Stargazing</h4>
+            <p class="card-desc" data-i18n="activity-stargazing-desc">Gaze at the night sky and learn about constellations in a serene setting.</p>
+            <button class="btn btn-add-to-cart" onclick="addToCart('Stargazing')" title="Add to Cart"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="cart-icon"><circle cx="9" cy="21" r="1" stroke="currentColor" stroke-width="2"/><circle cx="20" cy="21" r="1" stroke="currentColor" stroke-width="2"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="./files/City Night scape.jfif" alt="City Night Scape">
+          <div class="card-body">
+            <h4 data-i18n="activity-nightscape"><svg class="small-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M3 12h18M12 3v18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> City Night Scape</h4>
+            <p class="card-desc" data-i18n="activity-nightscape-desc">Explore the illuminated cityscape and hidden night spots.</p>
+            <button class="btn btn-add-to-cart" onclick="addToCart('City Night Scape')" title="Add to Cart"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="cart-icon"><circle cx="9" cy="21" r="1" stroke="currentColor" stroke-width="2"/><circle cx="20" cy="21" r="1" stroke="currentColor" stroke-width="2"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="./files/Malll.jfif" alt="Mall Activities">
+          <div class="card-body">
+            <h4 data-i18n="activity-mall"><svg class="small-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M3 12h18M12 3v18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Mall Activities</h4>
+            <p class="card-desc" data-i18n="activity-mall-desc">Shop, dine, and enjoy entertainment at Nairobi's vibrant malls.</p>
+            <button class="btn btn-add-to-cart" onclick="addToCart('Mall Activities')" title="Add to Cart"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="cart-icon"><circle cx="9" cy="21" r="1" stroke="currentColor" stroke-width="2"/><circle cx="20" cy="21" r="1" stroke="currentColor" stroke-width="2"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="./files/Dinner.jfif" alt="Dinner Buffet">
+          <div class="card-body">
+            <h4 data-i18n="activity-dinner"><svg class="small-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M3 12h18M12 3v18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Dinner Buffet</h4>
+            <p class="card-desc" data-i18n="activity-dinner-desc">Indulge in a variety of cuisines at exclusive dinner buffets.</p>
+            <button class="btn btn-add-to-cart" onclick="addToCart('Dinner Buffet')" title="Add to Cart"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="cart-icon"><circle cx="9" cy="21" r="1" stroke="currentColor" stroke-width="2"/><circle cx="20" cy="21" r="1" stroke="currentColor" stroke-width="2"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="./files/cinema.jfif" alt="Cinema and Theatre">
+          <div class="card-body">
+            <h4 data-i18n="activity-cinema"><svg class="small-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.5"/><path d="M12 1v6M12 17v6M4.22 4.22l4.24 4.24M15.54 15.54l4.24 4.24M1 12h6M17 12h6M4.22 19.78l4.24-4.24M15.54 8.46l4.24-4.24" stroke="currentColor" stroke-width="1.5"/></svg> Cinema and Theatre</h4>
+            <p class="card-desc" data-i18n="activity-cinema-desc">Catch the latest films or live theatre performances.</p>
+            <button class="btn btn-add-to-cart" onclick="addToCart('Cinema and Theatre')" title="Add to Cart"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="cart-icon"><circle cx="9" cy="21" r="1" stroke="currentColor" stroke-width="2"/><circle cx="20" cy="21" r="1" stroke="currentColor" stroke-width="2"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="./files/Bonfire.jfif" alt="Camping and Bonfire">
+          <div class="card-body">
+            <h4 data-i18n="activity-camping"><svg class="small-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 2c0 0-3 4-3 7c0 1.657 1.343 3 3 3s3-1.343 3-3c0-3-3-7-3-7zM8 20h8M10 20v-3M14 20v-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Camping and Bonfire</h4>
+            <p class="card-desc" data-i18n="activity-camping-desc">Experience an unforgettable night under the stars with friends around a bonfire.</p>
+            <button class="btn btn-add-to-cart" onclick="addToCart('Camping and Bonfire')" title="Add to Cart"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="cart-icon"><circle cx="9" cy="21" r="1" stroke="currentColor" stroke-width="2"/><circle cx="20" cy="21" r="1" stroke="currentColor" stroke-width="2"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="./files/turf.jfif" alt="Mtaa Game Night">
+          <div class="card-body">
+            <h4 data-i18n="activity-mtaa"><svg class="small-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/><path d="M12 3v18M3 12h18M7.5 7.5h9v9h-9z" stroke="currentColor" stroke-width="1.5"/></svg> Mtaa Game Night</h4>
+            <p class="card-desc" data-i18n="activity-mtaa-desc">Compete in urban street games, challenges, and social competitions with the vibrant Nairobi community.</p>
+            <button class="btn btn-add-to-cart" onclick="addToCart('Mtaa Game Night')" title="Add to Cart"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="cart-icon"><circle cx="9" cy="21" r="1" stroke="currentColor" stroke-width="2"/><circle cx="20" cy="21" r="1" stroke="currentColor" stroke-width="2"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          </div>
+        </article>
+
+        <article class="card card-booking-cta">
+          <img src="./files/logo%201.png" alt="Book Nairobi Nightlife Package">
+          <div class="card-body">
+            <h4 data-i18n="ready-book">Ready to Experience Nairobi's Nightlife?</h4>
+            <p class="card-desc" data-i18n="book-desc">Book your unforgettable adventure today. Choose your activities, select your date and time, and reserve your spot now.</p>
+            <a class="btn btn-primary btn-book-large" href="#" data-action="open-booking" data-i18n="book-btn">Book Now</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="packages" class="container packages">
+      <h3 data-i18n="package-heading">Nairobi Nightlife Package</h3>
+      <div class="package-details">
+        <div class="price-header">
+          <h2 style="margin-bottom: 0.5rem;" data-i18n="package-title">Nairobi Nightlife Experience</h2>
+          <p class="price-display" data-base-price="1150" data-price="1150" style="font-size: 2rem; font-weight: 700; color: var(--accent-2);">$1,150</p>
+          <p class="restriction" style="font-size: 1rem; color: var(--accent); margin: 0.5rem 0;"><strong data-i18n="age-label">Age Restriction:</strong> <span data-i18n="age-restrict-text">18+ (Adults Only)</span></p>
+        </div>
+
+        <div class="package-content">
+          <h4 data-i18n="highlights-heading">Highlights</h4>
+          <ul style="list-style-type: disc; padding-left: 1.5rem;">
+            <li data-i18n="highlight-1">Savor the flavors of Kenya with a traditional dinner or open grill feast</li>
+            <li data-i18n="highlight-2">Experience Nairobi's vibrant nightlife with a guided bar-hopping tour</li>
+            <li data-i18n="highlight-3">Dance the night away at a club with Afro-house, Amapiano, and more</li>
+            <li data-i18n="highlight-4">Try late-night street food like smokie pasua, mutura, and chips masala</li>
+          </ul>
+
+          <h4 style="margin-top: 2rem;" data-i18n="description-heading">Full Description</h4>
+          <p data-i18n="desc-1">Begin your evening with a professional guide. As dusk settles, drive through Nairobi's bustling streets toward a rooftop lounge—often in Westlands, Kilimani, or Lavington—areas famous for their high-end night spots.</p>
+          
+          <p data-i18n="desc-2">Enjoy a complimentary cocktail or fresh juice, panoramic views of Nairobi's skyline, and soft Afro-jazz or soulful music as the city lights come alive. It's the perfect moment for photos and settling into the rhythm of the night.</p>
+          
+          <p data-i18n="desc-3">Next, head to a top-rated restaurant for an authentic Kenyan dining experience. Depending on your preference, the evening may feature a traditional Kenyan buffet or a carnivore-style open grill experience. For adventurous eaters, try a selection of game meats alongside lively African music and dancing.</p>
+          
+          <p data-i18n="desc-4">A cultural briefing introduces Kenyan drinking etiquette, nightlife culture, and popular local brews (Tusker, White Cap, or craft beers).</p>
+          
+          <p data-i18n="desc-5">With your guide leading the way, set off for a bar-hopping experience across Nairobi's most energetic nightlife hub: Westlands. Each stop offers a different flavor of the city. Visit a cocktail lounge, a live music joint, and a social pub or sports bar.</p>
+          
+          <p data-i18n="desc-6">Now that the night is in full swing, it's time for Nairobi's famed club scene. Options include high-energy clubs known for Afro-house, Amapiano, Afrobeat, Dancehall, Hip-hop, and local Kenyan hits. Expect a vibrant, diverse crowd, high-quality DJs, light shows, and upbeat dance floors.</p>
+          
+          <p data-i18n="desc-7">After dancing, cool off with Nairobi's favorite late-night snacks: smokie pasua, mutura (Kenyan sausage), chips masala, mahindi choma (roast maize), and nyama choma stands. This is Nairobi at its most authentic—energetic, flavorful, and full of local charm.</p>
+          
+          <p data-i18n="desc-8">Finally, your driver returns you safely to your hotel or residence. End the night with a full photo gallery, memories of unmatched Kenyan hospitality, and a new understanding of why Nairobi's nightlife is legendary.</p>
+
+          <h4 style="margin-top: 2rem;" data-i18n="includes-heading">Includes</h4>
+          <ul style="list-style-type: disc; padding-left: 1.5rem;">
+            <li data-i18n="include-1">Professional nightlife guide</li>
+            <li data-i18n="include-2">Welcome drink</li>
+            <li data-i18n="include-3">Entry to bars and clubs</li>
+            <li data-i18n="include-4">Security oversight</li>
+            <li data-i18n="include-5">Cultural explanations</li>
+            <li data-i18n="include-6">Photography assistance</li>
+            <li data-i18n="include-7">VIP table at clubs</li>
+            <li data-i18n="include-8">Craft beer tasting</li>
+            <li data-i18n="include-9">Personalized photography package</li>
+            <li data-i18n="include-10">Private group vehicles</li>
+            <li data-i18n="include-11">Celebrity performance nights</li>
+          </ul>
+
+          <h4 style="margin-top: 2rem;" data-i18n="meetpoint-heading">Meeting Point</h4>
+          <p><strong data-i18n="meetpoint-location">Prestige Plaza Shopping Mall</strong><br>
+          <span data-i18n="meetpoint-desc">We meet at the front gate entrance.</span> <a href="https://maps.google.com" target="_blank" rel="noopener" data-i18n="maps-link">Open in Google Maps</a></p>
+
+          <h4 style="margin-top: 2rem;" data-i18n="important-heading">Important Information — Know Before You Go</h4>
+          <ul style="list-style-type: disc; padding-left: 1.5rem;">
+            <li data-i18n="important-1">The tour involves visiting multiple nightlife venues, so comfortable clothing and shoes are recommended.</li>
+            <li data-i18n="important-2">Participants should be prepared for a late night, as the tour ends between 2:00 and 3:00 AM.</li>
+            <li data-i18n="important-3">The tour includes alcoholic beverages, so participants should be of legal drinking age.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container" style="text-align:center;">
+      <p>© 2026 UrbanPulse Adventures. All rights reserved.</p>
+      <p><a href="terms.html" style="color:var(--accent-2); text-decoration:underline;">Terms and Conditions</a></p>
+    </div>
+  </footer>
+
+  <script src="./scripts/geo.js"></script>
+  <script src="./scripts/theme.js"></script>
+  <script src="./scripts/currency.js"></script>
+  <script src="./scripts/language.js"></script>
+  <script src="./scripts/auth.js"></script>
+  <script src="./scripts/global.js"></script>
+  <script src="./scripts/ux.js"></script>
+  <script src="./scripts/static.js"></script>
+  <script>
+    try {
+      setLanguage(detectedLang);
+      setCurrency(detectedCurrency, currencySymbols[detectedCurrency]);
+    } catch (e) {
+      // fallback silently
+      setLanguage('en');
+      setCurrency('USD', currencySymbols['USD']);
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      detectAndApplyLocale();
+      // ensure UI shows converted price and translated text after detection
+      updatePrices();
+      translatePage(currentLanguage);
+    });
+
+    function closeDropdown(dropdown) {
+      const menu = dropdown.querySelector('.dropdown-menu');
+      if (menu) {
+        menu.classList.remove('active');
+      }
+    }
+
+    function updatePrices() {
+      const basePrice = 1150;
+      const rate = exchangeRates[currentCurrency];
+      const convertedPrice = (basePrice * rate).toFixed(2);
+      
+      document.querySelectorAll('.price-display').forEach(el => {
+        el.textContent = currencySymbols[currentCurrency] + convertedPrice;
+      });
+    }
+
+    function translatePage(lang) {
+      const translations = {
+        'en': {'hero-title':'Nairobi Nightlife','hero-desc':'Discover Nairobi\'s vibrant after-dark culture — live music, food streets, and vibrant local scenes.','activities-heading':'Our Nightlife Activities','activity-clubhopping':'Club Hopping','activity-clubhopping-desc':'Dive into Nairobi\'s pulsating club scene with local guides leading the way.','activity-documentary':'Documentary Filming','activity-documentary-desc':'Capture authentic stories and moments with professional filming sessions.','activity-acoustic':'Acoustic Music and Karaoke','activity-acoustic-desc':'Enjoy live acoustic performances and join in karaoke fun.','activity-skyscrapers':'Nairobi Skyscrapers','activity-skyscrapers-desc':'Discover Nairobi\'s iconic skyscrapers and modern architecture lighting up the night sky.','activity-stargazing':'Stargazing','activity-stargazing-desc':'Gaze at the night sky and learn about constellations in a serene setting.','activity-nightscape':'City Night Scape','activity-nightscape-desc':'Explore the illuminated cityscape and hidden night spots.','activity-mall':'Mall Activities','activity-mall-desc':'Shop, dine, and enjoy entertainment at Nairobi\'s vibrant malls.','activity-dinner':'Dinner Buffet','activity-dinner-desc':'Indulge in a variety of cuisines at exclusive dinner buffets.','activity-cinema':'Cinema and Theatre','activity-cinema-desc':'Catch the latest films or live theatre performances.','activity-camping':'Camping and Bonfire','activity-camping-desc':'Experience an unforgettable night under the stars with friends around a bonfire.','activity-mtaa':'Mtaa Game Night','activity-mtaa-desc':'Compete in urban street games, challenges, and social competitions with the vibrant Nairobi community.','package-heading':'Nairobi Nightlife Package','package-title':'Nairobi Nightlife Experience','age-label':'Age Restriction:','age-restrict-text':'18+ (Adults Only)','highlights-heading':'Highlights','highlight-1':'Savor the flavors of Kenya with a traditional dinner or open grill feast','highlight-2':'Experience Nairobi\'s vibrant nightlife with a guided bar-hopping tour','highlight-3':'Dance the night away at a club with Afro-house, Amapiano, and more','highlight-4':'Try late-night street food like smokie pasua, mutura, and chips masala','description-heading':'Full Description','desc-1':'Begin your evening with a professional guide. As dusk settles, drive through Nairobi\'s bustling streets toward a rooftop lounge—often in Westlands, Kilimani, or Lavington—areas famous for their high-end night spots.','desc-2':'Enjoy a complimentary cocktail or fresh juice, panoramic views of Nairobi\'s skyline, and soft Afro-jazz or soulful music as the city lights come alive. It\'s the perfect moment for photos and settling into the rhythm of the night.','desc-3':'Next, head to a top-rated restaurant for an authentic Kenyan dining experience. Depending on your preference, the evening may feature a traditional Kenyan buffet or a carnivore-style open grill experience. For adventurous eaters, try a selection of game meats alongside lively African music and dancing.','desc-4':'A cultural briefing introduces Kenyan drinking etiquette, nightlife culture, and popular local brews (Tusker, White Cap, or craft beers).','desc-5':'With your guide leading the way, set off for a bar-hopping experience across Nairobi\'s most energetic nightlife hub: Westlands. Each stop offers a different flavor of the city. Visit a cocktail lounge, a live music joint, and a social pub or sports bar.','desc-6':'Now that the night is in full swing, it\'s time for Nairobi\'s famed club scene. Options include high-energy clubs known for Afro-house, Amapiano, Afrobeat, Dancehall, Hip-hop, and local Kenyan hits. Expect a vibrant, diverse crowd, high-quality DJs, light shows, and upbeat dance floors.','desc-7':'After dancing, cool off with Nairobi\'s favorite late-night snacks: smokie pasua, mutura (Kenyan sausage), chips masala, mahindi choma (roast maize), and nyama choma stands. This is Nairobi at its most authentic—energetic, flavorful, and full of local charm.','desc-8':'Finally, your driver returns you safely to your hotel or residence. End the night with a full photo gallery, memories of unmatched Kenyan hospitality, and a new understanding of why Nairobi\'s nightlife is legendary.','includes-heading':'Includes','include-1':'Professional nightlife guide','include-2':'Welcome drink','include-3':'Entry to bars and clubs','include-4':'Security oversight','include-5':'Cultural explanations','include-6':'Photography assistance','include-7':'VIP table at clubs','include-8':'Craft beer tasting','include-9':'Personalized photography package','include-10':'Private group vehicles','include-11':'Celebrity performance nights','meetpoint-heading':'Meeting Point','meetpoint-location':'Prestige Plaza Shopping Mall','meetpoint-desc':'We meet at the front gate entrance.','maps-link':'Open in Google Maps','important-heading':'Important Information — Know Before You Go','important-1':'The tour involves visiting multiple nightlife venues, so comfortable clothing and shoes are recommended.','important-2':'Participants should be prepared for a late night, as the tour ends between 2:00 and 3:00 AM.','important-3':'The tour includes alcoholic beverages, so participants should be of legal drinking age.','booking-title':'Book Your Adventure','ready-book':'Ready to Experience Nairobi\'s Nightlife?','book-desc':'Book your unforgettable adventure today. Choose your activities, select your date and time, and reserve your spot now.','book-btn':'Book Now'},
+        'sw': {'hero-title':'Mabukeni ya Nairobi','hero-desc':'Tafuta utajiri wa Nairobi baada ya jua - muziki bege, mitaa ya chakula, na maeneo ya ndoto.','activities-heading':'Shughuli Zetu za Usiku','activity-clubhopping':'Kuzunguka Vilabu','activity-clubhopping-desc':'Ingia katika nyumba ya musiki ya Nairobi na viongozi wa ndani wanakuongoza.','activity-documentary':'Kurekodi Filamu za Utamaduni','activity-documentary-desc':'Kamata hadithi na mipango halisi na vikoba vya filamu.','activity-acoustic':'Muziki wa Akustiki na Karaoke','activity-acoustic-desc':'Furahia tamasha za muziki halisi na ujina wa karaoke.','activity-skyscrapers':'Nyumba za Nairobi','activity-skyscrapers-desc':'Gundua majengo ya Nairobi na usanifu wa kisasa unaomwang\'a angavu usiku.','activity-stargazing':'Kutazama Nyota','activity-stargazing-desc':'Angalia angavu na jifunze kuhusu nyota katika mahali tulivu.','activity-nightscape':'Mandhari ya Jioni ya Jiji','activity-nightscape-desc':'Tembea jijini lililowaka na mahali maalum ya usiku.','activity-mall':'Shughuli za Duka la Jumla','activity-mall-desc':'Nunua, kula, na furahia burudani katika maduka ya Nairobi.','activity-dinner':'Chakula cha Jioni','activity-dinner-desc':'Taka vyakula mbalimbali katika meza za chakula.','activity-cinema':'Sinema na Ustadi','activity-cinema-desc':'Tazama filamu mpya au tamasha la ustadi.','activity-camping':'Kambi na Moto','activity-camping-desc':'Jifunza usiku usiotaka kusahau chini ya nyota na rafiki karibu na moto.','activity-mtaa':'Logomgeli ya Mtaa','activity-mtaa-desc':'Pinga katika michezo ya mitaa, changamoto, na shindano la kijamii na jamii ya Nairobi.','package-heading':'Paketi ya Mabukeni ya Nairobi','package-title':'Uzoefu wa Mabukeni ya Nairobi','age-label':'Jalibu la Umri:','age-restrict-text':'18+ (Watu Wazima Tu)','highlights-heading':'Vidokezo','highlight-1':'Taka ladha ya Kenya na chakula au kupika kwa moto','highlight-2':'Jifunza mabukeni ya Nairobi na mwongozo wa vilabu','highlight-3':'Cheza sehemu nzuri ya mgahawa na musiki wa Afro-house','highlight-4':'Jaribu chakula cha jioni kama smokie, mutura, na chips masala','description-heading':'Maelezo Kamili','desc-1':'Anza jioni yako na mwongozo. Huko njia ya jioni, endesha katika mitaa ya Nairobi kuelekea nyumba ya stuu - mara nyingi juu katika Westlands, Kilimani, au Lavington - maeneo yanayofahamika kwa mahali yenye bei nyingi.','desc-2':'Furahia kinywaji kama karatasi au maji ya matunda, mwonekano wa Nairobi, na muziki wa Afro-jazz au soulful wakati jiji linalocheza kuponyoka. Ni wakati mzuri kwa picha na kutembea kwa ritmu ya usiku.','desc-3':'Swalei, kuelekea mgahawa mzuri kwa ajili ya chakula cha Kenyan. Kulingana na upendeleo, jioni inaweza kuwa na chakula cha Kenyan au bifu ya moto. Kwa waajuzi, jaribu bifu mbalimbali sambamba na muziki wa Africa na mgema.','desc-4':'Fukuza kuhusu adabu ya kunywea, mabukeni, na bia za ndani (Tusker, White Cap, au bia za krafti).','desc-5':'Na mwongozo, tandika kwa uzoefu wa vilabu juu ya jiji - Westlands. Kila sehemu ina ladha tofauti. Tembelea mgahawa wa kinywaji, mahali pa muziki, na baa ya ndani.','desc-6':'Sasa jioni iko katika kasi yake, wakati wa vilabu vya Nairobi. Chaguo linajumuisha vilabu vya nguvu, muziki wa Afro-house, Amapiano, Afrobeat, Dancehall, Hip-hop. Taraj mtu tofauti, DJ mzuri, mwaliko, na safu ya mgema.','desc-7':'Baada ya mgema, kikohozi na chakula cha jioni: smokie pasua, mutura, chips masala, mahindi choma, na nyama choma. Hii ni Nairobi - nzuri, imara, na puno la ujinga wa ndani.','desc-8':'Hatimaye, dereva anakurudisha nyumbani salama. Kumalizisha jioni na picha kamili, kumbukumbu ya upendo wa Kenya, na uelewa mpya wa niaba ya mabukeni.','includes-heading':'Inajumuisha','include-1':'Mwongozo wa mabukeni','include-2':'Kinywaji cha karibu','include-3':'Kuingia vilabu','include-4':'Usalama','include-5':'Maelezo ya utamaduni','include-6':'Kusaidia picha','include-7':'Meza ya VIP','include-8':'Kupewa bia ya krafti','include-9':'Paketi ya picha','include-10':'Gari la ndani','include-11':'Usiku wa sanaa','meetpoint-heading':'Mahali pa Mkutano','meetpoint-location':'Prestige Plaza Shopping Mall','meetpoint-desc':'Tunakutana kwenye mlangoni wa ambo.','maps-link':'Fungua Google Maps','important-heading':'Taarifa Muhimu - Jua Kabla Ya Kuamua','important-1':'Uzoefu unajumuisha vilabu mbalimbali, kwa hiyo nguo nyingi na viatu vya rahat vinashauriwa.','important-2':'Waathirika wanapaswa kuwa tayari kwa jioni ndefu, uzoefu unatamatia kati ya 2:00 na 3:00 asubuhi.','important-3':'Uzoefu unajumuisha bia, kwa hiyo waathirika wanapaswa kuwa na umri wa kunywea.','booking-title':'Jaza Uzoefu Wako','ready-book':'Uma kukamatia Uzoefu wa Mabukeni ya Nairobi?','book-desc':'Jaza uzoefu wako usiotaka kusahau leo. Chagua shughuli zako, chagua tarehe na wakati, na jaza mahali paka sasa.','book-btn':'Jaza Sasa'},
+        'es': {'hero-title':'Vida Nocturna de Nairobi','hero-desc':'Descubre la vibrante cultura nocturna de Nairobi - música en vivo, calles de comida y escenas locales.','activities-heading':'Nuestras Actividades Nocturnas','activity-clubhopping':'Club Hopping','activity-clubhopping-desc':'Sumérgete en la escena de clubes palpitante de Nairobi con guías locales.','activity-documentary':'Filmación Documental','activity-documentary-desc':'Capturez des histoires et des moments authentiques avec des sessions de tournage professionnel.','activity-acoustic':'Música Acústica y Karaoke','activity-acoustic-desc':'Disfruta de presentaciones de música acústica en vivo y diversión de karaoke.','activity-skyscrapers':'Rascacielos de Nairobi','activity-skyscrapers-desc':'Descubre los icónicos rascacielos de Nairobi y la arquitectura moderna que ilumina la noche.','activity-stargazing':'Observación de Estrellas','activity-stargazing-desc':'Contempla el cielo nocturno y aprende sobre constelaciones en un entorno sereno.','activity-nightscape':'Panorama Nocturno de la Ciudad','activity-nightscape-desc':'Explora el paisaje urbano iluminado y lugares ocultos nocturnos.','activity-mall':'Actividades en Centros Comerciales','activity-mall-desc':'Faites du shopping, dînez et profitez du divertissement dans les centres commerciaux vibrants de Nairobi.','activity-dinner':'Cena Buffet','activity-dinner-desc':'Disfruta de una variedad de cocinas en buffetes de cena exclusivos.','activity-cinema':'Cine y Teatro','activity-cinema-desc':'Ve las últimas películas o presentaciones de teatro en vivo.','activity-camping':'Acampada y Fogata','activity-camping-desc':'Vive una noche inolvidable bajo las estrellas con amigos alrededor de una fogata.','activity-mtaa':'Noche de Juegos de Mtaa','activity-mtaa-desc':'Compite en juegos urbanos, desafíos y competiciones sociales con la comunidad vibrante de Nairobi.','package-heading':'Paquete de Vida Nocturna de Nairobi','package-title':'Experiencia de Vida Nocturna de Nairobi','age-label':'Restricción de Edad:','age-restrict-text':'18+ (Solo Adultos)','highlights-heading':'Destacados','highlight-1':'Saborea los sabores de Kenia con una cena tradicional o asado a la parrilla','highlight-2':'Experimenta la vibrante vida nocturna de Nairobi con un recorrido de bar en bar guiado','highlight-3':'Baila toda la noche en un club con Afro-house, Amapiano y más','highlight-4':'Prueba comida callejera nocturna como smokie pasua, mutura y chips masala','description-heading':'Descripción Completa','desc-1':'Comienza tu noche con un guía profesional. Al anochecer, conduce por las bulliciosas calles de Nairobi hacia un salón azotea—a menudo en Westlands, Kilimani o Lavington—áreas famosas por sus lugares de lujo.','desc-2':'Disfruta de un cóctel gratuito o jugo fresco, vistas panorámicas del horizonte de Nairobi, y música Afro-jazz suave o soulful mientras las luces de la ciudad cobran vida. Es el momento perfecto para fotos y sumergirse en el ritmo de la noche.','desc-3':'Luego, dirígete a un restaurante de primera categoría para una experiencia culinaria keniana auténtica. Dependiendo de tu preferencia, la noche puede presentar un buffet keniano tradicional o una experiencia de parrilla al estilo carnívoro. Para aventureros, prueba una selección de viandes de caza junto con música y danza africana animada.','desc-4':'Una charla cultural presenta la etiqueta de consommation d\'alcool kenyane, la culture nocturne et les bières locales populaires (Tusker, White Cap ou bières artisanales).','desc-5':'Con tu guide en tête, partez pour une expérience de bar en bar dans le centre nocturne le plus dynamique de Nairobi: Westlands. Chaque arrêt offre une saveur différente de la ville. Visitez un salon de cocktails, un lieu de musique en direct et un pub social ou bar sportif.','desc-6':'Maintenant que la nuit est en pleine forme, c\'est le moment pour la célèbre scène de clubs de Nairobi. Les options incluent des clubs à haute énergie connus pour l\'Afro-house, l\'Amapiano, l\'Afrobeat, la Dancehall, le Hip-hop et les hits kenyans. Attendez-vous à une foule vibrante et diversifiée, des DJ de haut niveau, des jeux de lumière et des pistes de danse animées.','desc-7':'Après la danse, rafraîchissez-vous avec les collations nocturnes préférées de Nairobi: smokie pasua, mutura (saucisse kenyane), chips masala, roast maize, nyama choma stands. Dis is Nairobi real ting - energetic, tasty, full of local char.','desc-8':'Finalement, votre conducteur vous ramène à votre hôtel ou résidence en toute sécurité. Terminez la nuit avec une galerie de photos complète, des souvenirs de l\'hospitalité kenyane incomparable, et une nouvelle compréhension de la raison pour laquelle la vie nocturne de Nairobi est légendaire.','includes-heading':'Incluye','include-1':'Guía profesional de vida nocturna','include-2':'Bebida de bienvenida','include-3':'Entrada a bares y clubs','include-4':'Supervisión de la seguridad','include-5':'Explicaciones culturales','include-6':'Asistencia fotográfica','include-7':'Mesa VIP en clubs','include-8':'Dégustation de bière artisanale','include-9':'Forfait photographie personnalisé','include-10':'Véhicules privés en groupe','include-11':'Soirées de performances de célébrités','meetpoint-heading':'Point de Rencontre','meetpoint-location':'Prestige Plaza Shopping Mall','meetpoint-desc':'Nous nous rencontrons à l\'entrée de la porte d\'entrée.','maps-link':'Ouvrir Google Maps','important-heading':'Informations Importantes - À Savoir Avant de Partir','important-1':'La visite implique de visiter plusieurs lieux de vie nocturne, il est donc recommandé de porter des vêtements confortables et des chaussures.','important-2':'Les participants doivent être préparés pour une nuit tard, car la visite se termine entre 2h00 et 3h00 du matin.','important-3':'La visite comprend des boissons alcoolisées, les participants doivent donc être d\'âge légal pour consommer de l\'alcool.','booking-title':'Réservez Votre Aventure','ready-book':'Prêt à Vivre la Vie Nocturne de Nairobi?','book-desc':'Réservez votre aventure inoubliable dès aujourd\'hui. Choisissez vos activités, sélectionnez votre date et heure, et réservez votre place maintenant.','book-btn':'Réserver Maintenant'},
+        'fr': {'hero-title':'Vie Nocturne de Nairobi','hero-desc':'Découvrez la culture nocturne vibrante de Nairobi - musique en direct, rues gastronomiques et scènes locales.','activities-heading':'Nos Activités Nocturnes','activity-clubhopping':'Club Hopping','activity-clubhopping-desc':'Plongez dans la scène de clubs palpitante de Nairobi avec des guides locaux.','activity-documentary':'Tournage Documentaire','activity-documentary-desc':'Capturez des histoires et des moments authentiques avec des sessions de tournage professionnel.','activity-acoustic':'Musique Acoustique et Karaoke','activity-acoustic-desc':'Profitez des performances de musique acoustique en direct et du plaisir du karaoke.','activity-skyscrapers':'Gratte-ciels de Nairobi','activity-skyscrapers-desc':'Découvrez les gratte-ciels iconiques de Nairobi et l\'architecture moderne illuminant le ciel nocturne.','activity-stargazing':'Observation des Étoiles','activity-stargazing-desc':'Contemplez le ciel nocturne et apprenez les constellations dans un cadre serein.','activity-nightscape':'Paysage Nocturne de la Ville','activity-nightscape-desc':'Explorez le paysage urbain illuminé et les lieux cachés de la nuit.','activity-mall':'Activités au Centre Commercial','activity-mall-desc':'Faites du shopping, dînez et profitez du divertissement dans les centres commerciaux vibrants de Nairobi.','activity-dinner':'Buffet Dîner','activity-dinner-desc':'Savourez une variété de cuisines aux buffets de dîner exclusifs.','activity-cinema':'Cinéma et Théâtre','activity-cinema-desc':'Regardez les derniers films ou des spectacles théâtraux en direct.','activity-camping':'Camping et Feu de Camp','activity-camping-desc':'Vivez une nuit inoubliable sous les étoiles avec des amis autour d\'un feu de camp.','activity-mtaa':'Soirée Jeux de Mtaa','activity-mtaa-desc':'Participez à des jeux urbains, des défis et des compétitions sociales avec la communité vibrante de Nairobi.','package-heading':'Forfait Vie Nocturne de Nairobi','package-title':'Expérience de Vie Nocturne de Nairobi','age-label':'Restriction d\'Âge:','age-restrict-text':'18+ (Adultes Uniquement)','highlights-heading':'Points Forts','highlight-1':'Savourez les saveurs du Kenya avec un dîner traditionnel ou un festin au gril','highlight-2':'Découvrez la vie nocturne vibrante de Nairobi avec une visite de bar en bar guidée','highlight-3':'Dansez toute la nuit dans un club avec Afro-house, Amapiano et plus','highlight-4':'Essayez la cuisine de rue nocturne comme smokie pasua, mutura et chips masala','description-heading':'Description Complète','desc-1':'Commencez votre soirée avec un guide professionnel. À la tombée du jour, circulez dans les rues animées de Nairobi vers un salon sur le toit—souvent à Westlands, Kilimani ou Lavington—des zones célèbres pour leurs lieux haut de gamme.','desc-2':'Dégustez un cocktail gratuit ou un jus frais, des vues panoramiques sur l\'horizon de Nairobi, et une musique Afro-jazz douce ou soulful alors que les lumières de la ville s\'animent. C\'est le moment idéal pour les photos et se plonger dans le rythme de la nuit.','desc-3':'Ensuite, dirigez-vous vers un restaurant de premier ordre pour une véritable expérience culinaire kenyane. Selon vos préférences, la soirée peut présenter un buffet kenyan traditionnel ou une expérience de gril carnivore. Pour les aventuriers, essayez une sélection de viandes de gibier accompagnées de musique et danse africaines animées.','desc-4':'Un aperçu culturel présente l\'étiquette de consommation d\'alcool kenyane, la culture nocturne et les bières locales populaires (Tusker, White Cap ou bières artisanales).','desc-5':'Avec votre guide en tête, partez pour une expérience de bar en bar dans le centre nocturne le plus dynamique de Nairobi: Westlands. Chaque arrêt offre une saveur différente de la ville. Visitez un salon de cocktails, un lieu de musique en direct et un pub social ou bar sportif.','desc-6':'Maintenant que la nuit est en pleine forme, c\'est le moment pour la célèbre scène de clubs de Nairobi. Les options incluent des clubs à haute énergie connus pour l\'Afro-house, l\'Amapiano, l\'Afrobeat, la Dancehall, le Hip-hop et les hits kenyans. Attendez-vous à une foule vibrante et diversifiée, des DJ de haut niveau, des jeux de lumière et des pistes de danse animées.','desc-7':'Après la danse, rafraîchissez-vous avec les collations nocturnes préférées de Nairobi: smokie pasua, mutura (saucisse kenyane), chips masala, roast maize, nyama choma stands. Dis is Nairobi real ting - energetic, tasty, full of local char.','desc-8':'Finalement, votre conducteur vous ramène à votre hôtel ou résidence en toute sécurité. Terminez la nuit avec une galerie de photos complète, des souvenirs de l\'hospitalité kenyane incomparable, et une nouvelle compréhension de la raison pour laquelle la vie nocturne de Nairobi est légendaire.','includes-heading':'Inclus','include-1':'Guide professionnel de vie nocturne','include-2':'Verre de bienvenue','include-3':'Entrée aux bars et clubs','include-4':'Supervision de la sécurité','include-5':'Explications culturelles','include-6':'Assistance photographique','include-7':'Table VIP dans les clubs','include-8':'Dégustation de bière artisanale','include-9':'Forfait photographie personnalisé','include-10':'Véhicules privés en groupe','include-11':'Soirées de performances de célébrités','meetpoint-heading':'Point de Rencontre','meetpoint-location':'Prestige Plaza Shopping Mall','meetpoint-desc':'Nous nous rencontrons à l\'entrée de la porte d\'entrée.','maps-link':'Ouvrir Google Maps','important-heading':'Informations Importantes - À Savoir Avant de Partir','important-1':'La visite implique de visiter plusieurs lieux de vie nocturne, il est donc recommandé de porter des vêtements confortables et des chaussures.','important-2':'Les participants doivent être préparés pour une nuit tard, car la visite se termine entre 2h00 et 3h00 du matin.','important-3':'La visite comprend des boissons alcoolisées, les participants doivent donc être d\'âge légal pour consommer de l\'alcool.','booking-title':'Réservez Votre Aventure','ready-book':'Prêt à Vivre la Vie Nocturne de Nairobi?','book-desc':'Réservez votre aventure inoubliable dès aujourd\'hui. Choisissez vos activités, sélectionnez votre date et heure, et réservez votre place maintenant.','book-btn':'Réserver Maintenant'},
+        'road': {'hero-title':'Nairobi Ting Ting Dem','hero-desc':'Bless up de vibe of Nairobi by night fam - live tunes, street food ting, and bare hype ting.','activities-heading':'Our Nightly Tings','activity-clubhopping':'Club Ting','activity-clubhopping-desc':'Get deep in de Nairobi club movement fam, real mans and mandem showin you de way innit.','activity-documentary':'Film Ting','activity-documentary-desc':'Catch real moments and stories with proper filming moving still.','activity-acoustic':'Acoustic Ting and Karaoke','activity-acoustic-desc':'Hear real live music and take your turn on de mic blud.','activity-skyscrapers':'Nairobi Heights','activity-skyscrapers-desc':'See de tall buildings of Nairobi glow up at night fam.','activity-stargazing':'Star Ting','activity-stargazing-desc':'Look at de bare stars and learn about de universe ting.','activity-nightscape':'City Lights Ting','activity-nightscape-desc':'Walk through de city when it\'s shining and find hidden spots.','activity-mall':'Duka Ting','activity-mall-desc':'Shop, eat, and have mad fun at Nairobi malls blud.','activity-dinner':'Eat Out Ting','activity-dinner-desc':'Get posh food at fancy dinner places innit.','activity-cinema':'Cinema Ting','activity-cinema-desc':'Watch new films or live shows on stage fam.','activity-camping':'Bush Ting and Fire','activity-camping-desc':'Sleep under de stars with bestfriends round a big fire still.','activity-mtaa':'Mtaa Game Ting','activity-mtaa-desc':'Play urban games and challenge man with real Nairobi fam.','package-heading':'Nairobi Night Package Still','package-title':'Nairobi Ting Ting Experience','age-label':'Age Ting:','age-restrict-text':'18+ (Grown Tings Only)','highlights-heading':'De Ting Dem','highlight-1':'Taste de real Kenya food - dinner and grill ting properly','highlight-2':'Feel Nairobi vibes with a bar crawl and mans showing u','highlight-3':'Dance till morning at clubs with Afro-house and Amapiano tunes','highlight-4':'Try street food like smokie pasua, mutura, and chips when it\'s dark','description-heading':'Bare Details','desc-1':'Start your night with a man that know Nairobi. When sun goes down, ride through de city to a rooftop ting - maybe Westlands or Kilimani - where de posh man dey.','desc-2':'Free drink or juice, see Nairobi from up top, hear live Afro-jazz as de city lights pop off. Perfect time to take man ting or just feel de vibe yah.','desc-3':'Go eat proper Kenya food at a red place. It can be traditional buffet or meat grill ting. For adventure man, try game meat with live music and dancing fam.','desc-4':'Man teach you how Kenyans drink and party, talk about de local beer ting - Tusker, White Cap, or craft beer blud.','desc-5':'Your guide lead you through Westlands - each bar got different ting. Cocktail place, live music spot, regular pub or sports bar.','desc-6':'Time for de famous Nairobi clubs fam. High energy ting with Afro-house, Amapiano, Afrobeat, Dancehall, Hip-hop. Real crowd, real DJ, lights on point, dance floor busy still.','desc-7':'After dancing, cool off with Nairobi street food - smokie pasua, mutura (sausage ting), chips masala, roast maize, nyama choma stands. Dis is Nairobi real ting - energetic, tasty, full of local char.','desc-8':'Finally, man drive you back safe to your place. End de night with bare photos, memories of Kenya welcome, and know why Nairobi nights is legendary guy.','includes-heading':'What\'s In It','include-1':'Real nightlife guide man','include-2':'Free drink first time','include-3':'Entry to all bars and clubs','include-4':'Security man watching you','include-5':'Kenya culture talk','include-6':'Man take photos for you','include-7':'VIP table at club ting','include-8':'Taste nice craft beer blud','include-9':'Your own photo package','include-10':'Private car for your team','include-11':'Famous man performing','meetpoint-heading':'Meet Up Spot','meetpoint-location':'Prestige Plaza Shopping Mall','meetpoint-desc':'We meet at de front gate still.','maps-link':'Open Google Maps','important-heading':'Real Talk - Blow This Before You Step','important-1':'You gonna visit bare bars and clubs, wear comfy clothes and shoes no cap.','important-2':'Be ready for late night ting, man we finish around 2 to 3 in de morning blud.','important-3':'Dis ting got alcohol, so you must be old enough to drink ting.','booking-title':'Book Your Ting Still','ready-book':'Yo, You Ready Fam?','book-desc':'Book your ting now blud. Pick your moves, set your day and time, and lock your spot straight.','book-btn':'Book Your Ting'}
+      };
+
+      const trans = translations[lang] || translations['en'];
+      Object.keys(trans).forEach(key => {
+        const el = document.querySelector(`[data-i18n="${key}"]`);
+        if (el) {
+          // Check if element has child elements (like SVG icons)
+          if (el.children.length > 0) {
+            // Preserve child elements, only update text content
+            let lastChildIndex = el.childNodes.length - 1;
+            let lastNode = el.childNodes[lastChildIndex];
+            
+            // If last node is a text node, update it
+            if (lastNode && lastNode.nodeType === Node.TEXT_NODE) {
+              lastNode.textContent = ' ' + trans[key];
+            } else {
+              // Otherwise add a text node at the end
+              el.appendChild(document.createTextNode(' ' + trans[key]));
+            }
+          } else {
+            // No children, safe to use textContent
+            el.textContent = trans[key];
+          }
+        }
+      });
+    }
+
+    function openLoginModal() {
+      alert('Login feature coming soon!\nPlease sign in to save your bookings and preferences.');
+    }
+
+    // Dropdown menu toggle
+    document.addEventListener('DOMContentLoaded', function() {
+      // Initialize prices on page load
+      updatePrices();
+      
+      document.querySelectorAll('.utility-dropdown .utility-btn').forEach(btn => {
+        btn.addEventListener('click', function(e) {
+          e.stopPropagation();
+          const menu = this.closest('.utility-dropdown').querySelector('.dropdown-menu');
+          document.querySelectorAll('.dropdown-menu').forEach(m => {
+            if (m !== menu) m.classList.remove('active');
+          });
+          menu.classList.toggle('active');
+        });
+      });
+
+      document.addEventListener('click', function(e) {
+        if (!e.target.closest('.utility-dropdown')) {
+          document.querySelectorAll('.dropdown-menu').forEach(m => m.classList.remove('active'));
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>

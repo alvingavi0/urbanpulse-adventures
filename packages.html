@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#f8fafc">
+  <title>Tour Packages — UrbanPulse Adventures</title>
+  <link rel="icon" href="./files/logo%201.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/static.css">
+</head>
+<body>
+  <div id="site-loader" class="loader">
+    <div class="loader-inner">
+      <img src="./files/logo%201.png" class="loader-logo" alt="logo">
+      <div class="loader-ring" aria-hidden="true">
+        <svg viewBox="0 0 100 100" role="img" aria-hidden="true">
+          <circle class="person" cx="50" cy="22" r="6" />
+          <circle class="person-sub" cx="76.63" cy="41.35" r="6" />
+          <circle class="person" cx="66.46" cy="72.65" r="6" />
+          <circle class="person-sub" cx="33.54" cy="72.65" r="6" />
+          <circle class="person" cx="23.37" cy="41.35" r="6" />
+          <circle cx="50" cy="50" r="3" fill="rgba(0,0,0,0.06)" />
+        </svg>
+      </div>
+      <div class="loader-text">Welcome to Urban Pulse Adventures</div>
+      <div class="loader-lines"><span></span><span></span><span></span></div>
+    </div>
+  </div>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="brand"><a href="./index.html"><img src="./files/logo%201.png" alt="UrbanPulse logo" class="brand-logo"> <span class="brand-text"><span class="brand-main">Urban Pulse</span><span class="brand-sub">Adventures</span></span></a></h1>
+
+      <button class="nav-toggle" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="hamburger"></span>
+      </button>
+      <!-- Utility Controls -->
+      <div class="nav-utilities">
+        <button class="utility-btn login-btn" title="Login">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2M12 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+
+        <div class="utility-dropdown">
+          <button class="utility-btn currency-btn" id="currencyBtn" title="Select Currency">
+            $
+          </button>
+          <div class="dropdown-menu currency-menu">
+            <button class="dropdown-item">$ USD</button>
+            <button class="dropdown-item">€ EUR</button>
+            <button class="dropdown-item">£ GBP</button>
+            <button class="dropdown-item">¥ JPY</button>
+            <button class="dropdown-item">₹ INR</button>
+            <button class="dropdown-item">د.إ AED</button>
+            <button class="dropdown-item">R ZAR</button>
+            <button class="dropdown-item">KSH</button>
+          </div>
+        </div>
+      </div>
+      <button class="theme-toggle" aria-label="Toggle theme" title="Toggle theme" style="margin-left:.5rem">☼</button>
+
+      <div id="live-clock" class="live-clock" title="Current Time"></div>
+
+      <div class="timezone-indicator" style="font-size:0.75rem; color:var(--muted); margin-left:0.5rem; margin-top:0.25rem;">East Africa Time (EAT)</div>
+
+      <nav id="mainNav" class="main-nav" aria-hidden="true">
+        <a href="./index.html">Home</a>
+        <a href="./packages.html" aria-current="page">Packages</a>
+        <a href="./about.html">About</a>
+        <a href="#" data-action="open-booking">Book</a>
+        <a href="./map.html">Map</a>
+        <a href="./donate.html">Donate</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero hero-sm" style="background-image: linear-gradient(180deg, rgba(139,94,52,0.24), rgba(194,123,57,0.12)), url('./files/Deskk.jfif'); color: #ffffff;">
+      <div class="container">
+        <h2 style="color:#ffffff">Our Tour Packages</h2>
+        <p class="muted" style="color:#ffffff">Explore Nairobi's vibrant culture with our curated tour experiences. Choose from three exclusive packages below.</p>
+      </div>
+    </section>
+
+    <section id="tours" class="container tours">
+      <h3 class="brown-text">All Packages</h3>
+      <div class="grid">
+        <article class="card">
+          <img src="./files/Desktop%204.jfif" alt="Kibera Street Vibes">
+          <div class="card-body">
+            <h4><svg class="small-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M3 12h14" stroke="currentColor" stroke-width="1.5"/></svg> Kibera Street Vibes</h4>
+            <p class="card-desc">Explore Nairobi's vibrant community and street culture with expert local guides.</p>
+            <div class="card-actions">
+              <a class="btn" href="#booking">Book</a>
+              <a class="btn btn-ghost" href="./kibera.html">Learn More</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="./files/image%2027.jfif" alt="Nairobi Nightlife">
+          <div class="card-body">
+            <h4><svg class="small-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 2v4M12 18v4M4 12h4M16 12h4" stroke="currentColor" stroke-width="1.5"/></svg> Nairobi Nightlife</h4>
+            <p class="card-desc">Discover Nairobi's after-dark culture — live music, food streets, and vibrant local scenes.</p>
+            <div class="card-actions">
+              <a class="btn" href="#booking">Book</a>
+              <a class="btn btn-ghost" href="./nightlife.html">Learn More</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="./files/Lens and Legend.jfif" alt="Lens & Legends">
+          <div class="card-body">
+            <h4><svg class="small-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.5"/></svg> Lens &amp; Legends</h4>
+            <p class="card-desc">Capture Nairobi's urban beauty with local storytellers and guides.</p>
+            <div class="card-actions">
+              <a class="btn" href="#booking">Book</a>
+              <a class="btn btn-ghost" href="./lens-legends.html">Learn More</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="./files/home.jfif" alt="UrbanStay Sanctuary">
+          <div class="card-body">
+            <h4><svg class="small-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M3 10L12 3L21 10V20C21 20.5523 20.5523 21 20 21H15C14.4477 21 14 20.5523 14 20V15H10V20C10 20.5523 9.55228 21 9 21H4C3.44772 21 3 20.5523 3 20V10Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 21V13H15V21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> UrbanStay Sanctuary</h4>
+            <p class="card-desc">Secure your stay in Nairobi with boutique rooms and 24/7 local support — perfect pairing for all UrbanPulse tours.</p>
+            <div class="card-actions">
+              <a class="btn" href="#booking">Book</a>
+              <a class="btn btn-ghost" href="#" onclick="alert('UrbanStay Sanctuary details coming soon')">Learn More</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container" style="text-align:center;">
+      <p>© 2026 UrbanPulse Adventures. All rights reserved.</p>
+      <p><a href="terms.html" style="color:var(--accent-2); text-decoration:underline;">Terms and Conditions</a></p>
+      <p class="muted">Email: info@urbanpulseadventures.com • Phone/WhatsApp: +254700000000</p>
+    </div>
+  </footer>
+
+  <script src="./scripts/geo.js"></script>
+  <script src="./scripts/theme.js"></script>
+  <script src="./scripts/currency.js"></script>
+  <script src="./scripts/language.js"></script>
+  <script src="./scripts/auth.js"></script>
+  <script src="./scripts/global.js"></script>
+  <script src="./scripts/ux.js"></script>
+  <script src="./scripts/static.js"></script>
+  
+
+</body>
+</html>

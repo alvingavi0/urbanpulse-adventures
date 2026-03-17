@@ -1,0 +1,60 @@
+{
+  "hero": {
+    "title": "Tembea Nairobi Kwa Njia Mpya",
+    "subtitle": "Gundua mahali ya siri, tamaduni ya jiji, na maajabu na viongozi wa ndani.",
+    "cta": "Tazama Safari"
+  },
+  "tours": {
+    "heading": "Safari Na Pakiti Zetu",
+    "kibera": {
+      "title": "Vibrations ya Mitaa ya Kibera",
+      "desc": "Chunguza jamii ya Nairobi na tamaduni ya mitaa.",
+      "book": "Kamatia",
+      "learnMore": "Jifunze Zaidi"
+    },
+    "nightlife": {
+      "title": "Mabuuni ya Nairobi",
+      "desc": "Gundua utajiri wa Nairobi baada ya jua — muziki bege, mitaa ya chakula, na maeneo ya ndoto.",
+      "price": "Ksh 115,000",
+      "book": "Kamatia",
+      "learnMore": "Jifunze Zaidi"
+    },
+    "lens": {
+      "title": "Kamera Na Hadithi",
+      "desc": "Kamatia uzuri wa jiji na wasifu wa ndani.",
+      "book": "Kamatia"
+    }
+  },
+  "booking": {
+    "heading": "Kamatia Ushindi Wako",
+    "name": "Jina Lako",
+    "email": "Barua Pepe Yako",
+    "selectTour": "Chagua Safari",
+    "selectTime": "Chagua Wakati",
+    "selectDate": "Chagua Tarehe",
+    "submit": "Wasilisha Kamatiano",
+    "tour1": "Vibrations ya Mitaa ya Kibera",
+    "tour2": "Mabuuni ya Nairobi",
+    "tour3": "Kamera Na Hadithi"
+  },
+  "gallery": {
+    "heading": "Picha"
+  },
+  "footer": {
+    "copyright": "© 2026 UrbanPulse Adventures. Haki zote zimehifadhiwa.",
+    "contact": "Barua: info@urbanpulseadventures.com • Simu/WhatsApp: +254700000000"
+  },
+  "nav": {
+    "home": "Nyumbani",
+    "packages": "Pakiti",
+    "about": "Kuhusu",
+    "book": "Kamatia"
+  },
+  "language": {
+    "english": "English",
+    "swahili": "Swahili",
+    "spanish": "Español",
+    "french": "Français",
+    "roadman": "Roadman"
+  }
+}
