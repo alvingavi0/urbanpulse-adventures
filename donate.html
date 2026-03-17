@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#f8fafc">
+  <title>Donate | UrbanPulse Adventures</title>
+  <link rel="icon" href="./files/logo%201.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/static.css">
+</head>
+<body class="site-preload">
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="brand"><a href="./"><img src="./files/logo%201.png" alt="UrbanPulse logo" class="brand-logo"> <span class="brand-text"><span class="brand-main">Urban Pulse</span><span class="brand-sub">Adventures</span></span></a></h1>
+      <button class="nav-toggle" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="hamburger"></span>
+      </button>
+      <nav id="mainNav" class="main-nav" aria-hidden="true">
+        <a href="./" data-key="nav.home">Home</a>
+        <a href="./packages.html" data-key="nav.packages">Packages</a>
+        <a href="./about.html" data-key="nav.about">About</a>
+        <a href="#" data-action="open-booking">Book</a>
+        <a href="./map.html">Map</a>
+        <a href="./donate.html" class="active">Donate</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero donate-hero" style="background-image:url('./files/Nairobi%20Skyscrapers.jpg');">
+      <div class="container" style="max-width:950px; text-align:center; color:#fff;"> 
+        <h2>Support Nairobi's Next Generation</h2>
+        <p>Donate to UrbanPulse and empower communities in Kibera, improve education access, and provide food, water, healthcare, and social programming.</p>
+        <a class="btn btn-secondary" href="#donate-now">Donate Now</a>
+      </div>
+    </section>
+
+    <section class="container donate-info">
+      <div class="donate-grid">
+        <article class="donate-card">
+          <h3>School Fees & Education</h3>
+          <p>Pay school fees and buy uniforms, books, and stationery for young learners in Kibera.</p>
+          <span>Impact: 45% of funds</span>
+        </article>
+        <article class="donate-card">
+          <h3>Food & Basic Needs</h3>
+          <p>Provide nutritious meals, hygiene kits, and safe water supply for families living in informal settlements.</p>
+          <span>Impact: 25% of funds</span>
+        </article>
+        <article class="donate-card">
+          <h3>Health & Wellness</h3>
+          <p>Support community wellness clinics, mental health counseling, and preventive health education programs.</p>
+          <span>Impact: 15% of funds</span>
+        </article>
+        <article class="donate-card">
+          <h3>Youth Skills & Leadership</h3>
+          <p>Fund vocational training, digital skills workshops, and local youth entrepreneurship initiatives.</p>
+          <span>Impact: 10% of funds</span>
+        </article>
+        <article class="donate-card">
+          <h3>Cultural Exchange & Creative Projects</h3>
+          <p>Support local artists, storytellers, and community events that preserve and celebrate Nairobi's urban culture.</p>
+          <span>Impact: 5% of funds</span>
+        </article>
+      </div>
+
+      <div class="donate-highlight">
+        <h3>How your donation helps</h3>
+        <ul>
+          <li>Community-learning labs in Kibera with free after-school classes for 120 children.</li>
+          <li>Food boxes distributed to 70+ households in the next month.</li>
+          <li>Free medical checkups and immunizations at three pop-up clinics.</li>
+          <li>Mentorship and career readiness support for 50+ youth.</li>
+          <li>Street cleanup and safety lighting around community hubs.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="donate-now" class="container donate-form-section">
+      <h3>Choose Your Donation</h3>
+      <form id="donationForm" class="donation-form" action="#" method="POST" onsubmit="return handleDonate(event)">
+        <div class="amount-section">
+          <label>Suggested amounts</label>
+          <div class="donation-tiers">
+            <button type="button" class="tier-btn" data-amount="10">$10</button>
+            <button type="button" class="tier-btn" data-amount="25">$25</button>
+            <button type="button" class="tier-btn" data-amount="50">$50</button>
+            <button type="button" class="tier-btn" data-amount="100">$100</button>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="donationAmount">Custom amount (USD)</label>
+          <input id="donationAmount" name="amount" class="form-input" type="number" min="1" placeholder="25" required>
+        </div>
+
+        <div class="form-group">
+          <label for="donorName">Full name</label>
+          <input id="donorName" name="name" class="form-input" type="text" required placeholder="Your Name">
+        </div>
+
+        <div class="form-group">
+          <label for="donorEmail">Email address</label>
+          <input id="donorEmail" name="email" class="form-input" type="email" required placeholder="you@example.com">
+        </div>
+
+        <div class="form-group">
+          <label for="purpose">Use of funds (optional selection)</label>
+          <select id="purpose" name="purpose" class="form-select">
+            <option value="education" selected>Education & school fees</option>
+            <option value="food">Food & basic needs</option>
+            <option value="health">Health & wellness</option>
+            <option value="skills">Youth skills & leadership</option>
+            <option value="culture">Cultural exchange & creative projects</option>
+          </select>
+        </div>
+
+        <div class="form-group consent-box">
+          <label class="consent-checkbox-wrapper">
+            <input type="checkbox" id="donationConsent" class="consent-checkbox" required>
+            <span class="checkbox-custom"></span>
+            <span class="consent-text">I agree to use donations for community support, youth services, and sustainable impact programs in Nairobi. <a href="terms.html" target="_blank" class="terms-link">View terms</a>.</span>
+          </label>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Donate $<span id="donationValue">25</span></button>
+      </form>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container" style="text-align:center;">
+      <p>© 2026 UrbanPulse Adventures. All rights reserved.</p>
+      <p><a href="terms.html" style="color:var(--accent-2); text-decoration:underline;">Terms and Conditions</a></p>
+      <p class="muted">Email: info@urbanpulseadventures.com • Phone/WhatsApp: +254700000000</p>
+    </div>
+  </footer>
+
+  <script src="./scripts/geo.js"></script>
+  <script src="./scripts/theme.js"></script>
+  <script src="./scripts/currency.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/i18next@23.7.0/dist/umd/i18next.min.js"></script>
+  <script src="./scripts/i18n-http-backend.js"></script>
+  <script src="./scripts/i18n-init.js"></script>
+  <script src="./scripts/i18n-switcher.js"></script>
+  <script src="./scripts/auth.js"></script>
+  <script src="./scripts/global.js"></script>
+  <script>
+    function updateDonationValue(amount) {
+      document.getElementById('donationValue').textContent = amount;
+      document.getElementById('donationAmount').value = amount;
+    }
+
+    document.querySelectorAll('.tier-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        document.querySelectorAll('.tier-btn').forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+        updateDonationValue(this.dataset.amount);
+      });
+    });
+
+    document.getElementById('donationAmount').addEventListener('input', function() {
+      var val = Math.max(1, Number(this.value) || 0);
+      document.getElementById('donationValue').textContent = val;
+    });
+
+    function handleDonate(event) {
+      event.preventDefault();
+      var amount = Number(document.getElementById('donationAmount').value);
+      if (amount <= 0) {
+        alert('Please enter a valid donation amount.');
+        return false;
+      }
+      var name = document.getElementById('donorName').value;
+      var email = document.getElementById('donorEmail').value;
+      var purpose = document.getElementById('purpose').value;
+      alert('Thanks, ' + name + '! Your donation of $' + amount + ' for ' + purpose + ' has been recorded.');
+      event.target.reset();
+      updateDonationValue(25);
+      document.querySelectorAll('.tier-btn').forEach(b => b.classList.remove('active'));
+      return false;
+    }
+  </script>
+</body>
+</html>
