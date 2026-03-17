@@ -309,20 +309,329 @@ body.site-preload > *:not(#site-loader){
 .btn-ghost{background:transparent; color:var(--accent); border:1px solid rgba(30,58,138,0.08)}
 
 /* Booking modal styling */
-.upa-modal-overlay{position:fixed; inset:0; display:none; align-items:center; justify-content:center; z-index:12000; background:rgba(0,0,0,.55);}
-.upa-modal-card{width:480px; max-width:92%; background:linear-gradient(180deg, #fff, #f6eee4); color:var(--accent); border-radius:16px; border:1px solid rgba(139,94,52,0.25); padding:1.2rem; box-shadow:0 24px 50px rgba(0,0,0,.28); max-height:90%; overflow:auto;}
-.package-list{display:flex; flex-direction:column; gap:1rem; margin-bottom:1rem;}
-.packages-list{display:flex; flex-direction:column; gap:1rem; margin-bottom:1rem;}
-.package-group{background:rgba(255,255,255,0.85); border:1px solid rgba(139,94,52,0.18); border-radius:12px; padding:0.85rem;}
-.package-group-standalone{background:rgba(255,245,240,0.95); border-color:rgba(194,123,57,0.3);}
-.package-group-title{font-weight:700; margin-bottom:.65rem; color:var(--accent-2); letter-spacing:.8px; text-transform:uppercase; font-size:.83rem;}
-.package-item{display:flex; justify-content:space-between; align-items:center; gap:.75rem; font-weight:600; color:var(--accent);}
-.package-item span{font-size:.95rem;}
-.btn-sm{padding:.45rem .75rem; font-size:.82rem; border-radius:8px; min-width:88px;}
-#upa-booking-form .form-field{margin-bottom:.75rem;}
-#upa-booking-form input{width:100%;}
-#upa-booking-form .btn-primary{width:100%;}
-#upa-booking-form{animation:fadeIn .3s ease both;}
+.upa-modal-overlay {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 12000;
+  background: linear-gradient(135deg, rgba(0,0,0,0.5), rgba(0,0,0,0.3));
+  backdrop-filter: blur(3px);
+  animation: fadeIn 0.3s ease-out;
+}
+
+.upa-modal-card {
+  width: 520px;
+  max-width: 95vw;
+  background: linear-gradient(180deg, #fff 0%, #f9f3ec 100%);
+  color: var(--accent);
+  border-radius: 18px;
+  border: 1px solid rgba(139, 94, 52, 0.15);
+  padding: 0;
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  max-height: 92vh;
+  overflow: auto;
+  animation: slideUp 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(30px) scale(0.95); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.upa-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.8rem;
+  border-bottom: 1px solid rgba(139, 94, 52, 0.1);
+  background: linear-gradient(135deg, rgba(255, 248, 243, 0.8), rgba(255, 245, 238, 0.8));
+}
+
+.upa-modal-title {
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: -0.5px;
+}
+
+.upa-modal-close {
+  background: transparent;
+  border: none;
+  color: var(--accent);
+  cursor: pointer;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.upa-modal-close:hover {
+  background: rgba(139, 94, 52, 0.1);
+  color: var(--accent-2);
+}
+
+#upa-booking-content {
+  padding: 1.8rem;
+}
+
+.upa-view-section {
+  animation: fadeIn 0.3s ease-out;
+}
+
+.upa-section-label {
+  font-family: 'Playfair Display', serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--accent-2);
+  text-transform: uppercase;
+  letter-spacing: 1.1px;
+  margin-bottom: 1.2rem;
+  display: block;
+}
+
+.package-list,
+.packages-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.package-group {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 250, 245, 0.8));
+  border: 1.5px solid rgba(139, 94, 52, 0.2);
+  border-radius: 14px;
+  padding: 1.1rem;
+  transition: all 0.3s cubic-bezier(0.2, 0.9, 0.3, 1);
+}
+
+.package-group:hover {
+  border-color: var(--accent-2);
+  box-shadow: 0 8px 24px rgba(139, 94, 52, 0.08);
+  transform: translateY(-2px);
+}
+
+.package-group-standalone {
+  background: linear-gradient(135deg, rgba(255, 248, 243, 0.95), rgba(255, 245, 238, 0.95));
+  border-color: rgba(194, 123, 57, 0.35);
+}
+
+.package-group-standalone:hover {
+  border-color: var(--accent-2);
+  box-shadow: 0 8px 24px rgba(194, 123, 57, 0.12);
+}
+
+.package-group-title {
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: var(--accent-2);
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.package-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  font-weight: 600;
+  color: var(--accent);
+  padding: 0.6rem 0;
+}
+
+.package-item span {
+  font-size: 0.95rem;
+  flex: 1;
+}
+
+.btn-sm {
+  padding: 0.5rem 0.9rem;
+  font-size: 0.8rem;
+  border-radius: 8px;
+  min-width: 90px;
+  white-space: nowrap;
+}
+
+/* Form sections */
+.upa-booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  animation: fadeIn 0.35s ease-out;
+}
+
+.upa-form-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(139, 94, 52, 0.08);
+}
+
+.upa-form-section:last-of-type {
+  border-bottom: none;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: 0.3px;
+}
+
+#upa-booking-form input {
+  width: 100%;
+}
+
+#upa-booking-form .btn-primary {
+  width: 100%;
+}
+
+.booking-datetime-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+@media (max-width: 600px) {
+  .booking-datetime-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Consent section */
+.upa-consent-section {
+  border: 1.5px solid rgba(194, 123, 57, 0.25);
+  border-radius: 12px;
+  padding: 1rem;
+  background: linear-gradient(135deg, rgba(255, 248, 243, 0.5), rgba(255, 245, 238, 0.5));
+}
+
+.consent-checkbox-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.consent-checkbox {
+  display: none;
+}
+
+.checkbox-custom {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--accent-2);
+  border-radius: 6px;
+  background: white;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2px;
+}
+
+.consent-checkbox:checked + .checkbox-custom {
+  background: var(--accent-2);
+  border-color: var(--accent-2);
+}
+
+.consent-checkbox:checked + .checkbox-custom::after {
+  content: '✓';
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.consent-text {
+  font-size: 0.9rem;
+  color: var(--accent);
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.consent-text a {
+  color: var(--accent-2);
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: 1.5px solid rgba(194, 123, 57, 0.3);
+  transition: all 0.2s ease;
+}
+
+.consent-text a:hover {
+  border-bottom-color: var(--accent-2);
+}
+
+.consent-helper-text {
+  margin: 0.75rem 0 0 0;
+  font-size: 0.8rem;
+  color: var(--muted);
+  font-style: italic;
+  line-height: 1.4;
+}
+
+/* Form actions */
+.upa-form-actions {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.upa-form-actions button {
+  flex: 1;
+  padding: 0.95rem;
+  border-radius: 10px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.2, 0.9, 0.3, 1);
+  font-size: 0.95rem;
+}
+
+#upa-form-back {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 250, 245, 0.9));
+  border: 1.5px solid var(--accent-2);
+  color: var(--accent-2);
+}
+
+#upa-form-back:hover {
+  background: rgba(194, 123, 57, 0.1);
+  transform: translateY(-1px);
+}
+
+#upa-booking-form button[type="submit"] {
+  background: linear-gradient(135deg, var(--accent-2), var(--accent));
+  color: white;
+}
+
+#upa-booking-form button[type="submit"]:not(:disabled):hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(194, 123, 57, 0.3);
+}
+
+#upa-booking-form button[type="submit"]:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
 @keyframes fadeIn{from{opacity:0; transform:translateY(8px);}to{opacity:1; transform:none;}}
 
 .tours h3, .booking h3, .gallery h3{margin:0 0 1rem; font-family:'Playfair Display', serif}
