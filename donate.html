@@ -12,6 +12,23 @@
   <link rel="stylesheet" href="./styles/static.css">
 </head>
 <body class="site-preload">
+  <div id="site-loader" class="loader">
+    <div class="loader-inner">
+      <img src="./files/logo%201.png" class="loader-logo" alt="logo">
+      <div class="loader-ring" aria-hidden="true">
+        <svg viewBox="0 0 100 100" role="img" aria-hidden="true">
+          <circle class="person" cx="50" cy="22" r="6" />
+          <circle class="person-sub" cx="76.63" cy="41.35" r="6" />
+          <circle class="person" cx="66.46" cy="72.65" r="6" />
+          <circle class="person-sub" cx="33.54" cy="72.65" r="6" />
+          <circle class="person" cx="23.37" cy="41.35" r="6" />
+          <circle cx="50" cy="50" r="3" fill="rgba(0,0,0,0.06)" />
+        </svg>
+      </div>
+      <div class="loader-text">Preparing the Donation Experience</div>
+      <div class="loader-lines"><span></span><span></span><span></span></div>
+    </div>
+  </div>
   <header class="site-header">
     <div class="container header-inner">
       <h1 class="brand"><a href="./"><img src="./files/logo%201.png" alt="UrbanPulse logo" class="brand-logo"> <span class="brand-text"><span class="brand-main">Urban Pulse</span><span class="brand-sub">Adventures</span></span></a></h1>
@@ -184,6 +201,16 @@
       document.querySelectorAll('.tier-btn').forEach(b => b.classList.remove('active'));
       return false;
     }
+  </script>
+  <script>
+    (function() {
+      var loader = document.getElementById('site-loader');
+      if (!loader) return;
+      setTimeout(function() {
+        loader.classList.add('hidden');
+        document.body.classList.remove('site-preload');
+      }, 500);
+    })();
   </script>
 </body>
 </html>
