@@ -116,6 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }));
     
     const form = m.querySelector('#upa-booking-form');
+
     const consent = form.querySelector('input[name="consent"]');
     const submitBtn = form.querySelector('button[type="submit"]');
     const backBtn = form.querySelector('#upa-form-back');
@@ -143,6 +144,9 @@ document.addEventListener('DOMContentLoaded', () => {
       overlay.style.display='none';
     });
   }
+
+  // expose for external click handlers (e.g. Kibera package buttons)
+  window.ensureBookingModal = ensureBookingModal;
 
   document.querySelectorAll('a[data-action="open-booking"]').forEach(a=>{
     a.addEventListener('click', function(e){ e.preventDefault(); ensureBookingModal(); document.querySelector('#upa-booking-modal .upa-modal-overlay').style.display='flex'; });
