@@ -70,6 +70,7 @@
         <a href="./" aria-current="page" data-key="nav.home">Home</a>
         <a href="./packages.html" data-key="nav.packages">Packages</a>
         <a href="./about.html" data-key="nav.about">About</a>
+        <a href="./blog.html">Blog</a>
         <a href="#" data-key="nav.book" data-action="open-booking">Book</a>
         <a href="./map.html">Map</a>
         <a href="./donate.html">Donate</a>
@@ -138,15 +139,30 @@
         </article>
 
         <article class="card">
-          <img src="./files/home.jfif" alt="UrbanStay Sanctuary">
-          <div class="card-body">
-            <h4><svg class="small-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M3 10L12 3L21 10V20C21 20.5523 20.5523 21 20 21H15C14.4477 21 14 20.5523 14 20V15H10V20C10 20.5523 9.55228 21 9 21H4C3.44772 21 3 20.5523 3 20V10Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 21V13H15V21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> UrbanStay Sanctuary</h4>
-            <p class="card-desc">Secure your stay in Nairobi with boutique rooms and 24/7 local support — perfect pairing for all UrbanPulse tours.</p>
-
-            <div class="card-actions">
-              <a class="btn" href="#booking">Book</a>
-              <a class="btn btn-ghost" href="#" onclick="alert('UrbanStay Sanctuary details coming soon')">Learn More</a>
+          <div class="standalone-door-section">
+            <div class="standalone-door-wrapper" id="standaloneDoorCardHomepage">
+              <div class="door-body">
+                <div class="door-metal-frame"></div>
+                <div class="door-panel">
+                  <div class="door-panel-structure">
+                    <div class="door-panel-section top-panel"></div>
+                    <div class="door-panel-section bottom-panel left"></div>
+                    <div class="door-panel-section bottom-panel right"></div>
+                  </div>
+                  <div class="door-sign">Welcome to Our Standalone Packages</div>
+                  <div class="door-knob"></div>
+                  <div class="hanger">
+                    <div class="door-rope"></div>
+                    <a class="door-tag" id="doorTagButtonHomepage" href="#" onclick="event.preventDefault(); openStandaloneBooking();">Open To Book</a>
+                  </div>
+                </div>
+              </div>
+              <div class="door-panel-info"></div>
             </div>
+          </div>
+          <div class="card-actions" style="justify-content:center; margin-top:0.9rem;">
+            <a class="btn" href="#" onclick="event.preventDefault(); openStandaloneBooking();">Book</a>
+            <a class="btn btn-ghost" href="./standalone-packages.html">Learn More</a>
           </div>
         </article>
 
