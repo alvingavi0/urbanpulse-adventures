@@ -86,12 +86,15 @@
           <h3>Basic <svg class="heading-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M3 12h18M12 3v18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></h3>
           <p class="muted">Great for first-time explorers. The Basic package contains essential community experiences.</p>
           <ul class="features">
-            <li>Kibera Street Walk</li>
-            <li>Storytelling &amp; Community Voices</li>
+            <li>Kibera Roots Walk</li>
+            <li>Taste the Streets</li>
+            <li>Mural Pulse Tour</li>
+            <li>Thrift &amp; Soko Walk</li>
+            <li>Lens Street Photography</li>
           </ul>
           <div class="card-footer">
             <p class="price-display" data-base-price="1150" data-price="1150" style="font-size:1.05rem; font-weight:700; color:var(--accent-2); margin:0">$1,150</p>
-            <button class="btn btn-primary">Book Basic</button>
+            <button class="btn btn-primary book-package-btn" data-tour="Kibera Street Vibes - Basic">Book Basic</button>
           </div>
         </div>
 
@@ -99,16 +102,15 @@
           <h3>Standard <span class="small muted">(includes Basic)</span> <svg class="heading-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 2v20M2 12h20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></h3>
           <p class="muted">Standard includes everything in Basic — below are the added experiences unique to Standard.</p>
           <ul class="features">
-            <li>Ride Through 8 Town</li>
-            <li>Kibera Street Food</li>
-            <li>Home Visits</li>
-            <li>Kibera Sports Hub</li>
-            <li>Fun Zone &amp; Community Finance</li>
-            <li>Kibera Makers Studio</li>
+            <li>Urban Craft Collective</li>
+            <li>Pulse Empowerment Circuit</li>
+            <li>Ndudhi Moto Ride</li>
+            <li>Street Art &amp; Graffiti Jam</li>
+            <li>Local Hangout Vibes</li>
           </ul>
           <div class="card-footer">
-            <p class="price-display" data-base-price="1150" data-price="1150" style="font-size:1.05rem; font-weight:700; color:var(--accent-2); margin:0">$1,150</p>
-            <button class="btn btn-secondary">Book Standard</button>
+            <p class="price-display" data-base-price="1850" data-price="1850" style="font-size:1.05rem; font-weight:700; color:var(--accent-2); margin:0">$1,850</p>
+            <button class="btn btn-secondary book-package-btn" data-tour="Kibera Street Vibes - Standard">Book Standard</button>
           </div>
         </div>
 
@@ -116,18 +118,17 @@
           <h3>Premium <span class="small muted">(exclusive experiences)</span></h3>
           <p class="muted">Premium features are exclusive and are not listed under Basic or Standard — upgrade for one-of-a-kind access.</p>
           <ul class="features">
-            <li>Content Creation</li>
-            <li>Accommodation &amp; Premium Stays</li>
-            <li>Tour Bouffe</li>
-            <li>Market Thrifting &amp; Personal Shopper</li>
-            <li>Kibera Luxuries</li>
-            <li>Classic Events</li>
-            <li>Premium Sports Experience</li>
-            <li>Private Artist Residency</li>
+            <li>Live Performance Showcase</li>
+            <li>Mtaa Sports Connect</li>
+            <li>Home-Route Community Visits</li>
+            <li>Nganya Experience</li>
+            <li>Creative Gallery Access</li>
+            <li>Urban Agri-Tour</li>
+            <li>Pulse Outreach Program</li>
           </ul>
           <div class="card-footer">
-            <p class="price-display" data-base-price="1150" data-price="1150" style="font-size:1.05rem; font-weight:700; color:var(--accent-2); margin:0">$1,150</p>
-            <button class="btn btn-accent">Book Premium</button>
+            <p class="price-display" data-base-price="2450" data-price="2450" style="font-size:1.05rem; font-weight:700; color:var(--accent-2); margin:0">$2,450</p>
+            <button class="btn btn-accent book-package-btn" data-tour="Kibera Street Vibes - Premium">Book Premium</button>
           </div>
         </div>
 
@@ -155,6 +156,38 @@
   <script src="./scripts/global.js"></script>
   <script src="./scripts/ux.js"></script>
   <script src="./scripts/static.js"></script>
+
+  <script>
+    function openKiberaBooking(button) {
+      const tour = button.dataset.tour || 'Kibera Street Vibes';
+      if (typeof ensureBookingModal === 'function') {
+        ensureBookingModal();
+      }
+      const modal = document.getElementById('upa-booking-modal');
+      if (!modal) return;
+      const form = modal.querySelector('#upa-booking-form');
+      const packagesView = modal.querySelector('#upa-packages-view');
+      if (form) {
+        form.style.display = 'block';
+        form.tour.value = tour;
+        form.querySelector('button[type="submit"]').disabled = true;
+      }
+      if (packagesView) {
+        packagesView.style.display = 'none';
+      }
+      const overlay = modal.querySelector('.upa-modal-overlay');
+      if (overlay) {
+        overlay.style.display = 'flex';
+      }
+    }
+
+    document.querySelectorAll('.book-package-btn').forEach(function(button) {
+      button.addEventListener('click', function(e) {
+        e.preventDefault();
+        openKiberaBooking(button);
+      });
+    });
+  </script>
 
 </body>
 </html>
