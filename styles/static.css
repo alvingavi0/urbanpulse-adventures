@@ -1131,3 +1131,62 @@ body.site-preload > *:not(#site-loader){
 .reveal.revealed{opacity:1; transform:none}
 
 
+/* === Responsive mobile improvements (max-width 768px) === */
+@media (max-width: 768px) {
+  html, body { min-width: 0 !important; overflow-x: hidden; }
+  .container { padding: 1rem; }
+  .site-header { padding: 0.4rem 0; }
+
+  .header-inner { flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 0.6rem; }
+  .brand { font-size: 1rem; }
+  .brand-logo { height: 44px; }
+  .brand-main { font-size: 0.97rem; }
+  .brand-sub { font-size: 0.62rem; }
+
+  .nav-toggle { display: inline-flex; margin-left: auto; }
+  .main-nav { position: absolute; top: 100%; right: 1rem; left: 1rem; background: rgba(255,255,255,0.96); border: 1px solid rgba(139,94,52,0.22); border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.2); flex-direction: column; align-items: stretch; gap: 0; transform: translateY(-20px); opacity: 0; visibility: hidden; transition: transform .3s ease, opacity .3s ease, visibility .3s ease; z-index: 105;
+    padding: .5rem .5rem .7rem;
+  }
+
+  .main-nav.open { transform: translateY(0); opacity: 1; visibility: visible; }
+  .main-nav a { display: block; margin: .25rem 0; font-size: .85rem; padding: .65rem .85rem; line-height: 1.35; }
+  .main-nav a::before, .main-nav a::after { display: none; }
+
+  .nav-utilities { order: 3; width: 100%; justify-content: flex-end; }
+
+  .hero { padding: 4rem 0 3rem; }
+  .hero h2 { font-size: 1.8rem; }
+  .hero p { font-size: 0.95rem; max-width: 95%; }
+
+  .grid, .grid-md-3, .grid-md-4, .grid-sm-2 { display: grid; grid-template-columns: minmax(0, 1fr); gap: 0.85rem; }
+  .grid-md-3, .grid-md-4 { grid-template-columns: 1fr; }
+
+  .card, .card-body, .packages-list, .package-list, .booking-datetime-row { width: 100%; }
+  .package-item { flex-direction: column; align-items: stretch; gap: .5rem; }
+
+  .activities article.card, .packages .card { margin-bottom: 0.95rem; }
+
+  .card img, .card figure, .package-item img { max-width: 100%; height: auto; }
+
+  .footer a, .site-footer p { font-size: 0.9rem; }
+
+  .live-clock { font-size:0.74rem; padding:0.2rem .4rem; }
+
+  .upa-modal-card { width: min(94vw, 520px); margin: 0 0.5rem; }
+
+  .up-section, .upa-modal-card, .upa-form-section { margin-bottom: 0.8rem; }
+
+  .grid-gap-2 { gap: 0.9rem; }
+}
+
+@media (max-width: 480px) {
+  .header-inner { gap: 0.4rem; }
+  .brand-logo { height: 38px; }
+  .brand-main { font-size: 0.92rem; }
+  .brand-sub { font-size: 0.58rem; }
+  .hero h2 { font-size: 1.5rem; }
+  .hero p { font-size: 0.9rem; }
+  .main-nav { right: 0.6rem; left: 0.6rem; }
+  .nav-utilities { flex-wrap: wrap; gap: 0.3rem; }
+  .container { padding: 0.7rem; }
+}

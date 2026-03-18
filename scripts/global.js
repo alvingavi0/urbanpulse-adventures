@@ -151,4 +151,24 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('a[data-action="open-booking"]').forEach(a=>{
     a.addEventListener('click', function(e){ e.preventDefault(); ensureBookingModal(); document.querySelector('#upa-booking-modal .upa-modal-overlay').style.display='flex'; });
   });
-});
+});// Mobile nav toggle (same behavior used in CSS)
+(function setupMobileNav(){
+  const navBtn = document.querySelector('.nav-toggle');
+  const mainNav = document.getElementById('mainNav');
+  if(!navBtn || !mainNav) return;
+  navBtn.addEventListener('click', function(e){
+    e.stopPropagation();
+    this.classList.toggle('open');
+    mainNav.classList.toggle('open');
+    const expanded = this.classList.contains('open');
+    this.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+  });
+  document.addEventListener('click', function(e){
+    const isInside = e.target.closest('.site-header');
+    if(!isInside){
+      navBtn.classList.remove('open');
+      mainNav.classList.remove('open');
+      navBtn.setAttribute('aria-expanded', 'false');
+    }
+  });
+})();
