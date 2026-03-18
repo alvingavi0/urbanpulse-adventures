@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#f8fafc" />
+  <title>Our Blog — UrbanPulse Adventures</title>
+  <link rel="icon" href="./files/logo%201.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles/static.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="brand"><a href="./index.html"><img src="./files/logo%201.png" alt="UrbanPulse logo" class="brand-logo" /> <span class="brand-text"><span class="brand-main">Urban Pulse</span><span class="brand-sub">Adventures</span></span></a></h1>
+      <button class="nav-toggle" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation"><span class="hamburger"></span></button>
+      <nav id="mainNav" class="main-nav" aria-hidden="true">
+        <a href="./index.html">Home</a>
+        <a href="./packages.html">Packages</a>
+        <a href="./about.html">About</a>
+        <a href="./map.html">Map</a>
+        <a href="./donate.html">Donate</a>
+        <a href="./blog.html" aria-current="page">Blog</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero hero-sm" style="background-image: linear-gradient(180deg, rgba(139,94,52,0.25), rgba(194,123,57,0.15)), url('./files/City Night scape.jfif'); color:#ffffff;">
+      <div class="container">
+        <h2 style="color:#ffffff">UrbanPulse Blog</h2>
+        <p class="muted" style="color:#ffffff">Latest tour adverts, event highlights, ratings, and a gallery experience.</p>
+      </div>
+    </section>
+
+    <section class="container" style="padding:2rem 0;">
+      <h3>Latest Tour Adverts</h3>
+      <div class="grid" style="gap:1rem; grid-template-columns:repeat(auto-fill,minmax(260px,1fr));">
+        <article class="card">
+          <img src="./files/Clubb Hopping.jfif" alt="Nightlife Tour" style="height:170px; object-fit:cover;" />
+          <div class="card-body">
+            <h4>Nightlife Special Promo</h4>
+            <p>Limited 20% off Nairobi Nightlife package for weekend groups. Book now and get free airport pickup.</p>
+          </div>
+        </article>
+        <article class="card">
+          <img src="./files/Nairobi Skyscrapers.jpg" alt="Skyline Package" style="height:170px; object-fit:cover;" />
+          <div class="card-body">
+            <h4>Sunset Skyline Safari</h4>
+            <p>Join our evening architecture tour plus rooftop dinner experience with complimentary photography tips.</p>
+          </div>
+        </article>
+        <article class="card">
+          <img src="./files/Malll.jfif" alt="Mall Experience" style="height:170px; object-fit:cover;" />
+          <div class="card-body">
+            <h4>Urban Shopping & Culture Day</h4>
+            <p>Shop, dine, and explore Nairobi’s top malls and hidden local markets with a guided local host.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="container" style="padding:2rem 0;">
+      <h3>Urban Pulse Rating Reviews</h3>
+      <div class="grid" style="gap:1rem; grid-template-columns:repeat(auto-fill,minmax(260px,1fr));">
+        <article class="card">
+          <div class="card-body">
+            <h4>5/5 - Kibera Street Vibes</h4>
+            <p>"Amazing tour with the best local guides. Felt safe and the street food stop was outstanding."</p>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-body">
+            <h4>4.9/5 - Nairobi Nightlife</h4>
+            <p>"Best night out in Nairobi. Great clubs and top-tier service. Must-do for first-time visitors!"</p>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-body">
+            <h4>4.8/5 - Lens & Legends</h4>
+            <p>"Unique photography experience and local legends stories. Worth every cent."</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="container" style="padding:2rem 0;">
+      <h3>Gallery Experience</h3>
+      <p>Share your best moments by dropping the URLs or upload soon; we’ll update this section with curated traveler galleries.</p>
+      <div class="grid gallery-grid">
+        <a href="#" style="pointer-events:none; opacity:.75;"><img src="./files/image 12.jfif" alt="Gallery1"></a>
+        <a href="#" style="pointer-events:none; opacity:.75;"><img src="./files/image 11.jfif" alt="Gallery2"></a>
+        <a href="#" style="pointer-events:none; opacity:.75;"><img src="./files/Desktop 6.jpg" alt="Gallery3"></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container" style="text-align:center;">
+      <p>© 2026 UrbanPulse Adventures. All rights reserved.</p>
+      <p><a href="#" style="color:var(--accent-2); text-decoration:underline;">Terms and Conditions</a></p>
+    </div>
+  </footer>
+
+  <script src="./scripts/geo.js"></script>
+  <script src="./scripts/theme.js"></script>
+  <script src="./scripts/currency.js"></script>
+  <script src="./scripts/language.js"></script>
+  <script src="./scripts/auth.js"></script>
+  <script src="./scripts/global.js"></script>
+  <script src="./scripts/ux.js"></script>
+  <script src="./scripts/static.js"></script>
+</body>
+</html>
