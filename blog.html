@@ -10,6 +10,15 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="./styles/static.css" />
+  <style>
+    .rating-stars { display:flex; align-items:center; gap:0.15rem; margin-bottom:0.5rem; }
+    .rating-stars span { font-size:1.1rem; color:#daa520; }
+    .rating-label { font-weight:700; color:var(--accent); margin-bottom:0.3rem; }
+    .blog-review-card .card-body { display:flex; flex-direction:column; gap:0.5rem; }
+    .blog-review-card .review-text { color: var(--muted); font-style:italic; margin:0; }
+    .blog-review-card h4 { margin:0 0 .35rem; font-size:1.05rem; }
+    .blog-card-colors .card { background:linear-gradient(135deg, rgba(255,248,240,0.88), rgba(255,247,238,0.92)); border:1px solid rgba(194,123,57,0.2); box-shadow:0 14px 30px rgba(43,31,23,0.09); }
+  </style>
 </head>
 <body>
   <header class="site-header">
@@ -64,23 +73,26 @@
 
     <section class="container" style="padding:2rem 0;">
       <h3>Urban Pulse Rating Reviews</h3>
-      <div class="grid" style="gap:1rem; grid-template-columns:repeat(auto-fill,minmax(260px,1fr));">
-        <article class="card">
+      <div class="grid blog-card-colors" style="gap:1rem; grid-template-columns:repeat(auto-fill,minmax(260px,1fr));">
+        <article class="card blog-review-card">
           <div class="card-body">
-            <h4>5/5 - Kibera Street Vibes</h4>
-            <p>"Amazing tour with the best local guides. Felt safe and the street food stop was outstanding."</p>
+            <div class="rating-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+            <h4 class="rating-label">Kibera Street Vibes</h4>
+            <p class="review-text">"Amazing tour with the best local guides. Felt safe and the street food stop was outstanding."</p>
           </div>
         </article>
-        <article class="card">
+        <article class="card blog-review-card">
           <div class="card-body">
-            <h4>4.9/5 - Nairobi Nightlife</h4>
-            <p>"Best night out in Nairobi. Great clubs and top-tier service. Must-do for first-time visitors!"</p>
+            <div class="rating-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>☆</span><span style="color:var(--muted);font-size:.88rem;">4.9</span></div>
+            <h4 class="rating-label">Nairobi Nightlife</h4>
+            <p class="review-text">"Best night out in Nairobi. Great clubs and top-tier service. Must-do for first-time visitors!"</p>
           </div>
         </article>
-        <article class="card">
+        <article class="card blog-review-card">
           <div class="card-body">
-            <h4>4.8/5 - Lens & Legends</h4>
-            <p>"Unique photography experience and local legends stories. Worth every cent."</p>
+            <div class="rating-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>☆</span><span style="color:var(--muted);font-size:.88rem;">4.8</span></div>
+            <h4 class="rating-label">Lens & Legends</h4>
+            <p class="review-text">"Unique photography experience and local legends stories. Worth every cent."</p>
           </div>
         </article>
       </div>
