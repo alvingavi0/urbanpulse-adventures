@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const BASE_CURRENCY = 'USD';
   const API_URL = 'https://open.er-api.com/v6/latest/USD';
   const FALLBACK_RATES = {
-    'USD': 1, 'EUR': 0.92, 'JPY': 149.38, 'GBP': 0.79, 'AUD': 1.55, 'CAD': 1.39, 'CHF': 0.91, 'CNY': 7.22, 'HKD': 7.81, 'NZD': 1.66, 'KES': 159.0, 'ZAR': 18.48, 'EGP': 55.24, 'NGN': 1487.5, 'MAD': 10.01, 'TND': 3.10, 'GHS': 14.80, 'BWP': 13.64, 'DZD': 138.24
+    'USD': 1, 'EUR': 0.92, 'JPY': 149.38, 'GBP': 0.79, 'AUD': 1.55, 'CAD': 1.39, 'CHF': 0.91, 'CNY': 7.22, 'HKD': 7.81, 'NZD': 1.66, 'KES': 159.0, 'KSH': 159.0, 'ZAR': 18.48, 'EGP': 55.24, 'NGN': 1487.5, 'MAD': 10.01, 'TND': 3.10, 'GHS': 14.80, 'BWP': 13.64, 'DZD': 138.24
   };
   let liveRates = Object.assign({}, FALLBACK_RATES);
 
@@ -18,8 +18,26 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  const CURRENCY_ALIAS = {
+    'KSH': 'KES',
+    'RMB': 'CNY',
+    'CNH': 'CNY'
+  };
+
+  function normalizeCurrency(code){
+    if(!code) return BASE_CURRENCY;
+    const upper = code.toUpperCase();
+    return CURRENCY_ALIAS[upper] || upper;
+  }
+
   function get(){ return localStorage.getItem(KEY) || null; }
-  function set(code){ localStorage.setItem(KEY, code); updateAll(code); const btn = document.getElementById('currencyBtn'); if(btn) btn.title = code; }
+  function set(code){
+    const normalized = normalizeCurrency(code);
+    localStorage.setItem(KEY, normalized);
+    updateAll(normalized);
+    const btn = document.getElementById('currencyBtn');
+    if(btn) btn.title = normalized;
+  }
 
   async function loadRates(){
     try{
@@ -28,6 +46,9 @@ document.addEventListener('DOMContentLoaded', () => {
       const data = await resp.json();
       if(data && data.result === 'success' && data.rates){
         liveRates = Object.assign({}, FALLBACK_RATES, data.rates);
+        if (data.rates['KES'] && !data.rates['KSH']) {
+          liveRates['KSH'] = data.rates['KES'];
+        }
         console.log('[CUR] live rates loaded', liveRates);
       }
     }catch(err){
@@ -39,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function detectDefault(){ try{ const lang=(navigator.language||'en').toLowerCase(); if(lang.includes('ke')||lang.includes('sw')) return 'KES'; if(lang.includes('en-us')||lang.includes('us')) return 'USD'; if(lang.includes('en-gb')||lang.includes('gb')) return 'GBP'; if(lang.includes('fr')||lang.includes('de')||lang.includes('es')) return 'EUR'; if(lang.includes('za')) return 'ZAR'; if(lang.includes('ng')) return 'NGN'; }catch(e){} return 'USD'; }
 
   async function updateAll(override){
-    const code = (override || get() || detectDefault()).toUpperCase();
+    const code = normalizeCurrency((override || get() || detectDefault()));
     await loadRates();
     document.querySelectorAll('[data-usd],[data-base-price],[data-price]').forEach(el => {
       if(el.classList.contains('no-currency')) return;
