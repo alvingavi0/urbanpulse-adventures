@@ -580,20 +580,26 @@ function initializeUx(){
     };
 
     window.setCurrency = function(code, symbol, evt){
-      window.currentCurrency = code;
+      const upperCode = (code || 'USD').toUpperCase();
+      window.currentCurrency = upperCode;
       const btn = document.getElementById('currencyBtn');
-      if(btn) btn.title = code;
-      // if a page-specific updatePrices exists, call it; otherwise try a simple replacement
-      if(typeof window.updatePrices === 'function') {
-        window.updatePrices();
+      if(btn) btn.title = upperCode;
+
+      if (typeof window.currency !== 'undefined' && typeof window.currency.set === 'function') {
+        window.currency.set(upperCode);
       } else {
-        // generic price update for elements with data-base-price attribute
-        document.querySelectorAll('[data-base-price]').forEach(el => {
-          const base = parseFloat(el.getAttribute('data-base-price')) || 0;
-          const rate = (window.exchangeRates && window.exchangeRates[code]) || 1;
-          el.textContent = (window.currencySymbols[code] || '') + (base * rate).toFixed(2);
-        });
+        if(typeof window.updatePrices === 'function') {
+          window.updatePrices();
+        } else {
+          // fallback for legacy elements
+          const rate = (window.exchangeRates && window.exchangeRates[upperCode]) || 1;
+          document.querySelectorAll('[data-base-price]').forEach(el => {
+            const base = parseFloat(el.getAttribute('data-base-price')) || 0;
+            el.textContent = (window.currencySymbols[upperCode] || '') + (base * rate).toFixed(2);
+          });
+        }
       }
+
       if(evt && evt.target) {
         const dd = evt.target.closest('.utility-dropdown'); if(dd) closeAllDropdowns();
       }

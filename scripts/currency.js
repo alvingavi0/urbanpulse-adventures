@@ -39,16 +39,35 @@ document.addEventListener('DOMContentLoaded', () => {
   function detectDefault(){ try{ const lang=(navigator.language||'en').toLowerCase(); if(lang.includes('ke')||lang.includes('sw')) return 'KES'; if(lang.includes('en-us')||lang.includes('us')) return 'USD'; if(lang.includes('en-gb')||lang.includes('gb')) return 'GBP'; if(lang.includes('fr')||lang.includes('de')||lang.includes('es')) return 'EUR'; if(lang.includes('za')) return 'ZAR'; if(lang.includes('ng')) return 'NGN'; }catch(e){} return 'USD'; }
 
   async function updateAll(override){
-    const code = override || get() || detectDefault();
+    const code = (override || get() || detectDefault()).toUpperCase();
     await loadRates();
-    document.querySelectorAll('[data-usd],[data-price],[data-base-price]').forEach(el => {
+    document.querySelectorAll('[data-usd],[data-base-price],[data-price]').forEach(el => {
       if(el.classList.contains('no-currency')) return;
-      const amountUSD = parseFloat(el.getAttribute('data-usd') || el.getAttribute('data-price') || el.getAttribute('data-base-price')) || 0;
-      const rate = (code === BASE_CURRENCY ? 1 : (liveRates[code] || FALLBACK_RATES[code] || 1));
-      const value = amountUSD * rate;
+
+      let baseUSD = null;
+      if(el.hasAttribute('data-usd')){
+        baseUSD = parseFloat(el.getAttribute('data-usd')) || 0;
+      } else if(el.hasAttribute('data-base-price')){
+        const amtKES = parseFloat(el.getAttribute('data-base-price')) || 0;
+        const rateKES = parseFloat(liveRates['KES'] || FALLBACK_RATES['KES'] || 1);
+        baseUSD = rateKES ? (amtKES / rateKES) : amtKES;
+      } else if(el.hasAttribute('data-price')){
+        const amount = parseFloat(el.getAttribute('data-price')) || 0;
+        // interpret as KES for backward compatibility
+        const rateKES = parseFloat(liveRates['KES'] || FALLBACK_RATES['KES'] || 1);
+        baseUSD = rateKES ? (amount / rateKES) : amount;
+      } else {
+        baseUSD = 0;
+      }
+
+      const targetRate = (code === BASE_CURRENCY ? 1 : (parseFloat(liveRates[code]) || parseFloat(FALLBACK_RATES[code]) || 1));
+      const value = baseUSD * targetRate;
       el.textContent = format(value, code);
-      el.setAttribute('data-price', amountUSD);
-      el.setAttribute('data-base-price', amountUSD);
+
+      // keep original fields for reliable future conversion
+      if (baseUSD >= 0) {
+        el.setAttribute('data-usd', baseUSD.toFixed(2));
+      }
     });
   }
 
